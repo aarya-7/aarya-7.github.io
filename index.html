@@ -148,34 +148,73 @@
 
 							<p>Short-form analyses, dataset explorations, and data learnings — things I found interesting enough to write down.</p>
 
-							<div class="row">
+							<div class="row" id="findings-row">
 
-								<!-- FINDING 1 -->
-								<div class="col-6 col-12-mobile">
-									<article class="item">
-										<header>
-											<h3>Finding Title Here</h3> <!-- EDIT: e.g. "What Spotify's data says about user retention" -->
-											<p style="font-size: 0.85em; color: #aaa;">Month Year &nbsp;|&nbsp; Tag e.g. Retention, SQL</p> <!-- EDIT: date + topic tag -->
-											<p>Write 2-3 sentences summarizing what you explored, what dataset you used, and the most interesting thing you found.</p> <!-- EDIT -->
-											<a href="https://medium.com/@yourprofile/ARTICLE-LINK" class="button small">Read on Medium</a> <!-- EDIT: your Medium link, or remove if not posting there -->
-										</header>
-									</article>
-								</div>
-
-								<!-- FINDING 2 -->
-								<div class="col-6 col-12-mobile">
+								<!-- FINDING 1 — always visible -->
+								<div class="col-4 col-12-mobile finding-card">
 									<article class="item">
 										<header>
 											<h3>Finding Title Here</h3> <!-- EDIT -->
-											<p style="font-size: 0.85em; color: #aaa;">Month Year &nbsp;|&nbsp; Tag</p> <!-- EDIT -->
-											<p>Write 2-3 sentences summarizing what you explored, what dataset you used, and the most interesting thing you found.</p> <!-- EDIT -->
-											<a href="https://medium.com/@yourprofile/ARTICLE-LINK" class="button small">Read on Medium</a> <!-- EDIT -->
+											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p> <!-- EDIT -->
+											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p> <!-- EDIT -->
+											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a> <!-- EDIT -->
 										</header>
 									</article>
 								</div>
 
-								<!-- ADD MORE FINDINGS BY DUPLICATING A BLOCK ABOVE -->
+								<!-- FINDING 2 — always visible -->
+								<div class="col-4 col-12-mobile finding-card">
+									<article class="item">
+										<header>
+											<h3>Finding Title Here</h3> <!-- EDIT -->
+											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p> <!-- EDIT -->
+											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p> <!-- EDIT -->
+											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a> <!-- EDIT -->
+										</header>
+									</article>
+								</div>
 
+								<!-- FINDING 3 — always visible -->
+								<div class="col-4 col-12-mobile finding-card">
+									<article class="item">
+										<header>
+											<h3>Finding Title Here</h3> <!-- EDIT -->
+											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p> <!-- EDIT -->
+											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p> <!-- EDIT -->
+											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a> <!-- EDIT -->
+										</header>
+									</article>
+								</div>
+
+								<!-- FINDING 4 — hidden by default -->
+								<div class="col-4 col-12-mobile finding-card finding-extra" style="display:none;">
+									<article class="item">
+										<header>
+											<h3>Finding Title Here</h3> <!-- EDIT -->
+											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p> <!-- EDIT -->
+											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p> <!-- EDIT -->
+											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a> <!-- EDIT -->
+										</header>
+									</article>
+								</div>
+
+								<!-- FINDING 5 — hidden by default -->
+								<div class="col-4 col-12-mobile finding-card finding-extra" style="display:none;">
+									<article class="item">
+										<header>
+											<h3>Finding Title Here</h3> <!-- EDIT -->
+											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p> <!-- EDIT -->
+											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p> <!-- EDIT -->
+											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a> <!-- EDIT -->
+										</header>
+									</article>
+								</div>
+
+							</div>
+
+							<!-- Show More / Show Less button -->
+							<div style="text-align:center; margin-top:2em;">
+								<button id="findings-toggle" class="button" onclick="toggleFindings()">Show More</button>
 							</div>
 
 						</div>
@@ -231,7 +270,7 @@
 		<!-- Footer -->
 			<div id="footer">
 				<ul class="copyright">
-					<li>&copy; Aarya Bhivsanee. All rights reserved.</li><li>
+					<li>&copy; Aarya Bhivsanee. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 				</ul>
 			</div>
 
@@ -243,6 +282,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				function toggleFindings() {
+					const extras = document.querySelectorAll('.finding-extra');
+					const btn = document.getElementById('findings-toggle');
+					const isHidden = extras[0].style.display === 'none';
+
+					extras.forEach(card => {
+						card.style.display = isHidden ? 'block' : 'none';
+					});
+
+					btn.textContent = isHidden ? 'Show Less' : 'Show More';
+				}
+			</script>
 
 	</body>
 </html>
