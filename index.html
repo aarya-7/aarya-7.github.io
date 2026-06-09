@@ -13,38 +13,48 @@
 </head>
 <body>
 
-  <!-- ─── Sidebar ───────────────────────────────────────────────── -->
+  <!-- ─── Sidebar (fixed left 40%) ─────────────────────────────── -->
   <aside id="sidebar">
-    <div class="sidebar-card">
+    <div class="sidebar-inner">
+
       <div class="avatar-wrap">
-        <!-- Drop your photo at images/avatar.jpg -->
         <img src="images/avatar.jpg" alt="Aarya Bhivsanee" />
       </div>
-      <div class="sidebar-body">
+
+      <div class="sidebar-right">
         <h2 class="sidebar-name">Aarya Bhivsanee</h2>
-        <div class="sidebar-badge">
-          <i class="fas fa-leaf"></i>
-        </div>
-        <p class="sidebar-tagline">M.S. Data Science candidate building analytics systems for revenue &amp; retention</p>
-        <div class="sidebar-icons">
-          <a href="mailto:aaryabhivsanee@gmail.com" title="Email">
+        <p class="sidebar-role">Data Analyst &amp; Data Scientist</p>
+
+        <p class="sidebar-bio">
+          M.S. Data Science candidate at Stevens Institute of Technology (GPA 3.55).
+          I build analytics systems using SQL, Python, and Tableau that help teams identify
+          revenue risk, customer churn, and conversion gaps before they become problems.
+        </p>
+
+        <div class="sidebar-links">
+          <a href="mailto:aaryabhivsanee@gmail.com" class="sidebar-link">
             <i class="fas fa-envelope"></i>
+            <span>aaryabhivsanee@gmail.com</span>
           </a>
-          <a href="https://linkedin.com/in/aarya-bhivsanee" target="_blank" rel="noopener" title="LinkedIn">
+          <a href="https://linkedin.com/in/aarya-bhivsanee" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fab fa-linkedin-in"></i>
+            <span>linkedin.com/in/aarya-bhivsanee</span>
           </a>
-          <a href="https://github.com/aarya-7" target="_blank" rel="noopener" title="GitHub">
+          <a href="https://github.com/aarya-7" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fab fa-github"></i>
+            <span>github.com/aarya-7</span>
           </a>
-          <a href="assets/resume.pdf" download title="Download Resume">
+          <a href="assets/resume.pdf" download class="sidebar-link resume-link">
             <i class="fas fa-download"></i>
+            <span>Download Resume</span>
           </a>
         </div>
       </div>
+
     </div>
   </aside>
 
-  <!-- ─── Top Navigation ────────────────────────────────────────── -->
+  <!-- ─── Top Nav (centered, hides on scroll) ──────────────────── -->
   <nav id="topnav">
     <div class="nav-pill">
       <a href="#hero"       class="nav-item active" data-tooltip="Home">       <i class="fas fa-house"></i></a>
@@ -56,7 +66,7 @@
     </div>
   </nav>
 
-  <!-- ─── Main Content ──────────────────────────────────────────── -->
+  <!-- ─── Main Content (scrollable right 60%) ──────────────────── -->
   <main id="main">
 
     <!-- Hero -->
@@ -66,8 +76,9 @@
         <span class="title-ghost">&amp; SCIENTIST</span>
       </div>
       <p class="hero-desc">
-        Building analytics systems that surface revenue risk, customer churn signals, and conversion gaps.
-        M.S. Data Science candidate at Stevens Institute of Technology &mdash; turning raw data into decisions teams can act on.
+        Building analytics systems that surface revenue risk, customer churn signals,
+        and conversion gaps. M.S. Data Science candidate at Stevens Institute of Technology,
+        turning raw data into decisions teams can act on.
       </p>
       <div class="stats-row">
         <div class="stat">
@@ -97,7 +108,7 @@
           <img src="images/proj1.jpg" alt="E-commerce Funnel Analysis" class="project-thumb" />
           <div class="project-info">
             <h3>E-commerce Funnel Analysis</h3>
-            <p>Identified revenue leakage across 1.7M user sessions by modeling a View &rarr; Cart &rarr; Transaction funnel &mdash; quantifying drop-off at each stage and recommending 3 A/B tests with primary and guardrail metrics. Delivered 4 Tableau dashboards.</p>
+            <p>Analyzed 1.7 million user sessions to locate where revenue was leaking across the checkout funnel. Quantified drop-off at each stage from View to Cart to Transaction, then proposed 3 A/B tests targeting cart recovery, product page clarity, and category UX with defined primary and guardrail metrics. Delivered 4 Tableau dashboards covering funnel health, segmentation, and time-to-convert.</p>
           </div>
           <i class="fas fa-arrow-up-right project-arrow"></i>
         </a>
@@ -106,7 +117,7 @@
           <img src="images/proj2.jpg" alt="GMV Anomaly Detection" class="project-thumb" />
           <div class="project-info">
             <h3>GMV Anomaly Detection &amp; Attribution</h3>
-            <p>Built a real-time revenue monitoring system that flags abnormal GMV swings before they compound &mdash; detecting 17 anomalies across 409 days with severity tiers and category-level root cause attribution via an executive drill-down dashboard.</p>
+            <p>Built a revenue monitoring system that automatically flags abnormal GMV movements before they escalate. Detected 17 anomalies across 409 days and classified each by severity and spike or drop direction. An interactive Tableau drill-down dashboard attributes each anomaly to specific product categories, giving revenue teams the context to act quickly.</p>
           </div>
           <i class="fas fa-arrow-up-right project-arrow"></i>
         </a>
@@ -115,7 +126,7 @@
           <img src="images/proj3.jpg" alt="SaaS Retention & Churn Analytics" class="project-thumb" />
           <div class="project-info">
             <h3>SaaS Retention &amp; Churn Analytics</h3>
-            <p>Designed a proactive churn prevention system across 500 accounts &mdash; surfacing at-risk customers before cancellation using cohort retention metrics (M1: 90.1%, M3: 76.5%, M6: 57.4%) and an explainable early warning model with risk bands.</p>
+            <p>Designed a churn prevention system across 500 accounts that identifies at-risk customers before they cancel. Cohort retention tracked at M1 (90.1%), M3 (76.5%), and M6 (57.4%) showed where drop-off concentrated. A behavioral early warning model produces risk bands and churn reason codes, giving customer success teams a prioritized list for proactive outreach.</p>
           </div>
           <i class="fas fa-arrow-up-right project-arrow"></i>
         </a>
@@ -137,7 +148,7 @@
           </div>
           <div>
             <h4>PostgreSQL &amp; SQL</h4>
-            <p>Advanced analytics SQL &mdash; CTEs, window functions, sessionization, and aggregations across large-scale datasets.</p>
+            <p>Advanced analytics SQL including CTEs, window functions, sessionization, and aggregations across large-scale datasets.</p>
           </div>
         </div>
 
@@ -147,7 +158,7 @@
           </div>
           <div>
             <h4>Python</h4>
-            <p>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SciPy &mdash; from EDA to end-to-end ML pipelines.</p>
+            <p>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SciPy from EDA through to end-to-end ML pipelines.</p>
           </div>
         </div>
 
@@ -162,8 +173,8 @@
         </div>
 
         <div class="skill-item">
-          <div class="skill-icon" style="background:#182a20;">
-            <i class="fas fa-brain" style="color:#10b981;"></i>
+          <div class="skill-icon" style="background:#1e2a18;">
+            <i class="fas fa-brain" style="color:#86efac;"></i>
           </div>
           <div>
             <h4>Machine Learning</h4>
@@ -220,7 +231,7 @@
           </div>
           <p class="exp-company">Exposys Data Labs &middot; Maharashtra, India</p>
           <ul class="exp-bullets">
-            <li>Cleaned and standardized a 768-patient healthcare dataset (8 clinical variables including glucose, BMI, and insulin levels), handling missing values and engineering derived features to support downstream risk analysis.</li>
+            <li>Cleaned and standardized a 768-patient healthcare dataset covering 8 clinical variables including glucose, BMI, and insulin levels, handling missing values and engineering derived features to support downstream risk analysis.</li>
             <li>Identified glucose, BMI, and age as the strongest predictors of diabetes risk and delivered stakeholder-ready visualizations summarizing key risk factor patterns and segment-level breakdowns.</li>
           </ul>
         </div>
@@ -236,7 +247,6 @@
       </div>
       <div class="findings-list">
 
-        <!-- EDIT: Replace each card with your real findings -->
         <div class="finding-card">
           <div class="finding-meta">
             <span>Month Year</span>
@@ -246,7 +256,7 @@
             <span>X min read</span>
           </div>
           <h3>Finding Title Here</h3>
-          <p>2&ndash;3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
+          <p>2 to 3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
           <i class="fas fa-arrow-up-right finding-arrow"></i>
         </div>
 
@@ -259,7 +269,7 @@
             <span>X min read</span>
           </div>
           <h3>Finding Title Here</h3>
-          <p>2&ndash;3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
+          <p>2 to 3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
           <i class="fas fa-arrow-up-right finding-arrow"></i>
         </div>
 
@@ -272,7 +282,7 @@
             <span>X min read</span>
           </div>
           <h3>Finding Title Here</h3>
-          <p>2&ndash;3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
+          <p>2 to 3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
           <i class="fas fa-arrow-up-right finding-arrow"></i>
         </div>
 
@@ -322,7 +332,17 @@
 
   <!-- ─── Scripts ───────────────────────────────────────────────── -->
   <script>
-    // Highlight active nav item on scroll
+    // Hide nav on scroll, show only when back at top
+    const nav = document.getElementById('topnav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        nav.classList.add('hidden');
+      } else {
+        nav.classList.remove('hidden');
+      }
+    }, { passive: true });
+
+    // Highlight active nav item based on scroll position
     const sections = document.querySelectorAll('.section');
     const navItems = document.querySelectorAll('.nav-item');
 
