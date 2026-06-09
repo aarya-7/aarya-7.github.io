@@ -1,306 +1,353 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Aarya Bhivsanee | Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarya Bhivsanee | Data Analyst</title>
+  <meta name="description" content="M.S. Data Science candidate at Stevens Institute of Technology. Building analytics systems for revenue intelligence, customer health, and conversion optimization." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-		<!-- Header -->
-			<div id="header">
+  <!-- ─── Sidebar ───────────────────────────────────────────────── -->
+  <aside id="sidebar">
+    <div class="sidebar-card">
+      <div class="avatar-wrap">
+        <!-- Drop your photo at images/avatar.jpg -->
+        <img src="images/avatar.jpg" alt="Aarya Bhivsanee" />
+      </div>
+      <div class="sidebar-body">
+        <h2 class="sidebar-name">Aarya Bhivsanee</h2>
+        <div class="sidebar-badge">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <p class="sidebar-tagline">M.S. Data Science candidate building analytics systems for revenue &amp; retention</p>
+        <div class="sidebar-icons">
+          <a href="mailto:aaryabhivsanee@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://linkedin.com/in/aarya-bhivsanee" target="_blank" rel="noopener" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/aarya-7" target="_blank" rel="noopener" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="assets/resume.pdf" download title="Download Resume">
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
 
-				<div class="top">
+  <!-- ─── Top Navigation ────────────────────────────────────────── -->
+  <nav id="topnav">
+    <div class="nav-pill">
+      <a href="#hero"       class="nav-item active" data-tooltip="Home">       <i class="fas fa-house"></i></a>
+      <a href="#projects"   class="nav-item"        data-tooltip="Projects">   <i class="fas fa-folder-open"></i></a>
+      <a href="#skills"     class="nav-item"        data-tooltip="Skills">     <i class="fas fa-layer-group"></i></a>
+      <a href="#experience" class="nav-item"        data-tooltip="Experience"> <i class="fas fa-briefcase"></i></a>
+      <a href="#findings"   class="nav-item"        data-tooltip="Findings">   <i class="fas fa-pen-nib"></i></a>
+      <a href="#tableau"    class="nav-item"        data-tooltip="Tableau">    <i class="fas fa-chart-bar"></i></a>
+    </div>
+  </nav>
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Aarya Bhivsanee</h1>
-							<p>Data Analyst &amp; Data Scientist</p>
-						</div>
+  <!-- ─── Main Content ──────────────────────────────────────────── -->
+  <main id="main">
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
-								<li><a href="#tableau" id="tableau-link"><span class="icon solid fa-chart-bar">Tableau</span></a></li>
-								<li><a href="#findings" id="findings-link"><span class="icon solid fa-pen">Findings</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+    <!-- Hero -->
+    <section id="hero" class="section">
+      <div class="section-title">
+        <span class="title-solid">DATA ANALYST</span>
+        <span class="title-ghost">&amp; SCIENTIST</span>
+      </div>
+      <p class="hero-desc">
+        Building analytics systems that surface revenue risk, customer churn signals, and conversion gaps.
+        M.S. Data Science candidate at Stevens Institute of Technology &mdash; turning raw data into decisions teams can act on.
+      </p>
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-num">1.7M+</span>
+          <span class="stat-label">Sessions Analyzed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Analytics Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Accounts Tracked</span>
+        </div>
+      </div>
+    </section>
 
-				</div>
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="section-title">
+        <span class="title-solid">RECENT</span>
+        <span class="title-ghost">PROJECTS</span>
+      </div>
+      <div class="project-list">
 
-				<div class="bottom">
+        <a href="https://github.com/aarya-7/retail_rocket-funnel_analytics" target="_blank" rel="noopener" class="project-card">
+          <img src="images/proj1.jpg" alt="E-commerce Funnel Analysis" class="project-thumb" />
+          <div class="project-info">
+            <h3>E-commerce Funnel Analysis</h3>
+            <p>Identified revenue leakage across 1.7M user sessions by modeling a View &rarr; Cart &rarr; Transaction funnel &mdash; quantifying drop-off at each stage and recommending 3 A/B tests with primary and guardrail metrics. Delivered 4 Tableau dashboards.</p>
+          </div>
+          <i class="fas fa-arrow-up-right project-arrow"></i>
+        </a>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://github.com/aarya-7" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://linkedin.com/in/aarya-bhivsanee" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="mailto:aaryabhivsanee@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+        <a href="https://github.com/aarya-7/REPO-NAME" target="_blank" rel="noopener" class="project-card">
+          <img src="images/proj2.jpg" alt="GMV Anomaly Detection" class="project-thumb" />
+          <div class="project-info">
+            <h3>GMV Anomaly Detection &amp; Attribution</h3>
+            <p>Built a real-time revenue monitoring system that flags abnormal GMV swings before they compound &mdash; detecting 17 anomalies across 409 days with severity tiers and category-level root cause attribution via an executive drill-down dashboard.</p>
+          </div>
+          <i class="fas fa-arrow-up-right project-arrow"></i>
+        </a>
 
-				</div>
+        <a href="https://github.com/aarya-7/Saas-retention-churn-early-warning" target="_blank" rel="noopener" class="project-card">
+          <img src="images/proj3.jpg" alt="SaaS Retention & Churn Analytics" class="project-thumb" />
+          <div class="project-info">
+            <h3>SaaS Retention &amp; Churn Analytics</h3>
+            <p>Designed a proactive churn prevention system across 500 accounts &mdash; surfacing at-risk customers before cancellation using cohort retention metrics (M1: 90.1%, M3: 76.5%, M6: 57.4%) and an explainable early warning model with risk bands.</p>
+          </div>
+          <i class="fas fa-arrow-up-right project-arrow"></i>
+        </a>
 
-			</div>
+      </div>
+    </section>
 
-		<!-- Main -->
-			<div id="main">
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section-title">
+        <span class="title-solid">MY TECH</span>
+        <span class="title-ghost">STACK</span>
+      </div>
+      <div class="skills-grid">
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+        <div class="skill-item">
+          <div class="skill-icon" style="background:#1a2e40;">
+            <i class="fas fa-database" style="color:#5b9bd5;"></i>
+          </div>
+          <div>
+            <h4>PostgreSQL &amp; SQL</h4>
+            <p>Advanced analytics SQL &mdash; CTEs, window functions, sessionization, and aggregations across large-scale datasets.</p>
+          </div>
+        </div>
 
-							<header>
-								<h2 class="alt">Hi, I'm <strong>Aarya Bhivsanee</strong></h2>
-								<p>
-									M.S. Data Science candidate at Stevens Institute of Technology with a track record of building<br />
-									analytics systems that surface revenue risk, customer churn signals, and conversion gaps.<br />
-									I translate raw data into decisions teams can act on — through SQL, Python, and Tableau.
-								</p>
-							</header>
+        <div class="skill-item">
+          <div class="skill-icon" style="background:#2d2a18;">
+            <i class="fab fa-python" style="color:#f7cc41;"></i>
+          </div>
+          <div>
+            <h4>Python</h4>
+            <p>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SciPy &mdash; from EDA to end-to-end ML pipelines.</p>
+          </div>
+        </div>
 
-							<footer>
-								<a href="#portfolio" class="button scrolly">View My Work</a>
-							</footer>
+        <div class="skill-item">
+          <div class="skill-icon" style="background:#1a2d3a;">
+            <i class="fas fa-chart-line" style="color:#1fa8e0;"></i>
+          </div>
+          <div>
+            <h4>Tableau &amp; Power BI</h4>
+            <p>Executive dashboards covering funnel health, anomaly overlays, cohort retention, and KPI reporting.</p>
+          </div>
+        </div>
 
-						</div>
-					</section>
+        <div class="skill-item">
+          <div class="skill-icon" style="background:#182a20;">
+            <i class="fas fa-brain" style="color:#10b981;"></i>
+          </div>
+          <div>
+            <h4>Machine Learning</h4>
+            <p>Classification, risk scoring, and explainable early warning models using usage and behavioral signals.</p>
+          </div>
+        </div>
 
-				<!-- Projects -->
-					<section id="portfolio" class="two">
-						<div class="container">
+        <div class="skill-item">
+          <div class="skill-icon" style="background:#281e16;">
+            <i class="fas fa-cubes" style="color:#f97316;"></i>
+          </div>
+          <div>
+            <h4>dbt &amp; Snowflake</h4>
+            <p>Data transformation and warehouse-layer analytics for scalable, modular, and testable reporting pipelines.</p>
+          </div>
+        </div>
 
-							<header>
-								<h2>Projects</h2>
-							</header>
+        <div class="skill-item">
+          <div class="skill-icon" style="background:#1e1c2a;">
+            <i class="fas fa-code-branch" style="color:#a78bfa;"></i>
+          </div>
+          <div>
+            <h4>Git &amp; Jupyter</h4>
+            <p>Version-controlled analytics workflows with reproducible notebooks and structured project documentation.</p>
+          </div>
+        </div>
 
-							<p>End-to-end analytics projects focused on revenue intelligence, customer health, and conversion optimization — built with PostgreSQL, Python, and Tableau.</p>
+      </div>
+    </section>
 
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="https://github.com/aarya-7/retail_rocket-funnel_analytics" class="image fit"><img src="images/proj1.jpg" alt="" /></a>
-										<header>
-											<h3>E-commerce Funnel Analysis</h3>
-											<p>Identified revenue leakage across 1.7M user sessions by modeling a View &rarr; Cart &rarr; Transaction funnel in PostgreSQL — quantifying drop-off at each stage and recommending 3 A/B tests (cart recovery, PDP clarity, category UX) with primary and guardrail metrics. Delivered 4 Tableau dashboards covering funnel health, segmentation, and time-to-convert.</p>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="https://github.com/aarya-7/REPO-NAME" class="image fit"><img src="images/proj2.jpg" alt="" /></a>
-										<header>
-											<h3>GMV Anomaly Detection &amp; Attribution</h3>
-											<p>Built a real-time revenue monitoring system that flags abnormal GMV swings before they compound — detecting 17 anomalies across 409 days with severity tiers and category-level root cause attribution. Delivered an executive drill-down dashboard enabling faster, more targeted revenue investigations.</p>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="https://github.com/aarya-7/Saas-retention-churn-early-warning" class="image fit"><img src="images/proj3.jpg" alt="" /></a>
-										<header>
-											<h3>SaaS Retention &amp; Churn Analytics</h3>
-											<p>Designed a proactive churn prevention system across 500 accounts — surfacing at-risk customers before cancellation using cohort retention metrics (M1: 90.1%, M3: 76.5%, M6: 57.4%) and an explainable early warning model with risk bands and churn reason codes to directly support retention strategy.</p>
-										</header>
-									</article>
-								</div>
-							</div>
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="section-title">
+        <span class="title-solid">WORK</span>
+        <span class="title-ghost">EXPERIENCE</span>
+      </div>
+      <div class="exp-list">
 
-						</div>
-					</section>
+        <div class="exp-card">
+          <div class="exp-header">
+            <h3>Graduate Peer Leader</h3>
+            <span class="exp-date">Aug 2025 &ndash; Present</span>
+          </div>
+          <p class="exp-company">Stevens Institute of Technology &middot; Hoboken, NJ</p>
+          <ul class="exp-bullets">
+            <li>Mentored incoming graduate students through academic and professional transitions, providing structured guidance on goal setting, coursework selection, and campus resources throughout the semester.</li>
+          </ul>
+        </div>
 
-				<!-- Tableau -->
-					<section id="tableau" class="three">
-						<div class="container">
+        <div class="exp-card">
+          <div class="exp-header">
+            <h3>Data Science Intern</h3>
+            <span class="exp-date">2023</span>
+          </div>
+          <p class="exp-company">Exposys Data Labs &middot; Maharashtra, India</p>
+          <ul class="exp-bullets">
+            <li>Cleaned and standardized a 768-patient healthcare dataset (8 clinical variables including glucose, BMI, and insulin levels), handling missing values and engineering derived features to support downstream risk analysis.</li>
+            <li>Identified glucose, BMI, and age as the strongest predictors of diabetes risk and delivered stakeholder-ready visualizations summarizing key risk factor patterns and segment-level breakdowns.</li>
+          </ul>
+        </div>
 
-							<header>
-								<h2>Tableau Dashboards</h2>
-							</header>
+      </div>
+    </section>
 
-							<p>Interactive dashboards built on Tableau Public — covering funnel health, anomaly detection, and SaaS retention.</p>
+    <!-- Findings -->
+    <section id="findings" class="section">
+      <div class="section-title">
+        <span class="title-solid">CURIOUS</span>
+        <span class="title-ghost">FINDINGS</span>
+      </div>
+      <div class="findings-list">
 
-							<div style="margin-bottom: 2em;">
-								<h3>E-commerce Funnel Dashboard</h3>
-								<!-- PASTE TABLEAU EMBED CODE HERE -->
-							</div>
+        <!-- EDIT: Replace each card with your real findings -->
+        <div class="finding-card">
+          <div class="finding-meta">
+            <span>Month Year</span>
+            <span>&middot;</span>
+            <span>Topic Tag</span>
+            <span>&middot;</span>
+            <span>X min read</span>
+          </div>
+          <h3>Finding Title Here</h3>
+          <p>2&ndash;3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
+          <i class="fas fa-arrow-up-right finding-arrow"></i>
+        </div>
 
-							<div style="margin-bottom: 2em;">
-								<h3>GMV Anomaly Detection Dashboard</h3>
-								<!-- PASTE TABLEAU EMBED CODE HERE -->
-							</div>
+        <div class="finding-card">
+          <div class="finding-meta">
+            <span>Month Year</span>
+            <span>&middot;</span>
+            <span>Topic Tag</span>
+            <span>&middot;</span>
+            <span>X min read</span>
+          </div>
+          <h3>Finding Title Here</h3>
+          <p>2&ndash;3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
+          <i class="fas fa-arrow-up-right finding-arrow"></i>
+        </div>
 
-							<div>
-								<h3>SaaS Retention Dashboard</h3>
-								<!-- PASTE TABLEAU EMBED CODE HERE -->
-							</div>
+        <div class="finding-card">
+          <div class="finding-meta">
+            <span>Month Year</span>
+            <span>&middot;</span>
+            <span>Topic Tag</span>
+            <span>&middot;</span>
+            <span>X min read</span>
+          </div>
+          <h3>Finding Title Here</h3>
+          <p>2&ndash;3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
+          <i class="fas fa-arrow-up-right finding-arrow"></i>
+        </div>
 
-						</div>
-					</section>
+      </div>
+    </section>
 
-				<!-- Findings -->
-					<section id="findings" class="two">
-						<div class="container">
+    <!-- Tableau Dashboards -->
+    <section id="tableau" class="section">
+      <div class="section-title">
+        <span class="title-solid">TABLEAU</span>
+        <span class="title-ghost">DASHBOARDS</span>
+      </div>
+      <div class="tableau-list">
 
-							<header>
-								<h2>Findings</h2>
-							</header>
+        <div class="tableau-item">
+          <h3>E-commerce Funnel Dashboard</h3>
+          <!-- PASTE TABLEAU EMBED CODE HERE -->
+          <div class="tableau-placeholder">Paste Tableau embed code here</div>
+        </div>
 
-							<p>Short-form analyses, dataset explorations, and data learnings — things I found interesting enough to write down.</p>
+        <div class="tableau-item">
+          <h3>GMV Anomaly Detection Dashboard</h3>
+          <!-- PASTE TABLEAU EMBED CODE HERE -->
+          <div class="tableau-placeholder">Paste Tableau embed code here</div>
+        </div>
 
-							<div class="row" id="findings-row">
+        <div class="tableau-item">
+          <h3>SaaS Retention Dashboard</h3>
+          <!-- PASTE TABLEAU EMBED CODE HERE -->
+          <div class="tableau-placeholder">Paste Tableau embed code here</div>
+        </div>
 
-								<!-- FINDING 1 — always visible -->
-								<div class="col-4 col-12-mobile finding-card">
-									<article class="item">
-										<header>
-											<h3>Finding Title Here</h3>
-											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p>
-											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
-											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a>
-										</header>
-									</article>
-								</div>
+      </div>
+    </section>
 
-								<!-- FINDING 2 — always visible -->
-								<div class="col-4 col-12-mobile finding-card">
-									<article class="item">
-										<header>
-											<h3>Finding Title Here</h3>
-											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p>
-											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
-											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a>
-										</header>
-									</article>
-								</div>
+  </main>
 
-								<!-- FINDING 3 — always visible -->
-								<div class="col-4 col-12-mobile finding-card">
-									<article class="item">
-										<header>
-											<h3>Finding Title Here</h3>
-											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p>
-											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
-											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a>
-										</header>
-									</article>
-								</div>
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <p>&copy; 2026 Aarya Bhivsanee. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:aaryabhivsanee@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/aarya-bhivsanee" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/aarya-7" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
 
-								<!-- FINDING 4 — hidden by default -->
-								<div class="col-4 col-12-mobile finding-card finding-extra" style="display:none;">
-									<article class="item">
-										<header>
-											<h3>Finding Title Here</h3>
-											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p>
-											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
-											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a>
-										</header>
-									</article>
-								</div>
+  <!-- ─── Scripts ───────────────────────────────────────────────── -->
+  <script>
+    // Highlight active nav item on scroll
+    const sections = document.querySelectorAll('.section');
+    const navItems = document.querySelectorAll('.nav-item');
 
-								<!-- FINDING 5 — hidden by default -->
-								<div class="col-4 col-12-mobile finding-card finding-extra" style="display:none;">
-									<article class="item">
-										<header>
-											<h3>Finding Title Here</h3>
-											<p style="font-size:0.85em;color:#aaa;">Month Year &nbsp;|&nbsp; Topic Tag</p>
-											<p>2-3 sentence summary of what you explored, what dataset you used, and the most interesting thing you found.</p>
-											<a href="https://medium.com/@yourprofile/LINK" class="button small">Read More</a>
-										</header>
-									</article>
-								</div>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navItems.forEach(item => {
+            item.classList.toggle('active', item.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -40% 0px' });
 
-							</div>
+    sections.forEach(s => observer.observe(s));
 
-							<!-- Show More / Show Less button -->
-							<div style="text-align:center; margin-top:2em;">
-								<button id="findings-toggle" class="button" onclick="toggleFindings()">Show More</button>
-							</div>
+    // Smooth scroll on nav click
+    navItems.forEach(item => {
+      item.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(item.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 
-						</div>
-					</section>
-
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>About Me</h2>
-							</header>
-
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-							<p>I'm Aarya Bhivsanee, a Master's student in Data Science at Stevens Institute of Technology (GPA: 3.55), graduating May 2026. I hold a Bachelor's in Artificial Intelligence and Data Science from Savitribai Phule Pune University (GPA: 8.3/10). I specialize in building analytics systems — from raw data pipelines to executive dashboards — that help teams make faster, more grounded decisions.</p>
-
-							<p>My project work spans e-commerce conversion optimization, real-time revenue anomaly detection, and SaaS churn prevention. I also serve as a Graduate Peer Leader at Stevens Institute of Technology, mentoring incoming graduate students through academic and professional transitions.</p>
-
-							<p>
-								<strong>SQL:</strong> PostgreSQL, MySQL, Snowflake &mdash; joins, CTEs, window functions, subqueries, aggregations<br />
-								<strong>Python:</strong> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SciPy, BeautifulSoup<br />
-								<strong>Analytics:</strong> EDA, Funnel Analysis, Cohort &amp; Retention Analysis, A/B Testing, KPI Design, Statistical Analysis<br />
-								<strong>Reporting:</strong> Tableau, Power BI, Excel (pivot tables, VLOOKUP, financial modeling), Google Sheets<br />
-								<strong>Tools:</strong> Jupyter, dbt, Git/GitHub, PowerPoint, AI Tools (Claude, ChatGPT, n8n, Gemini)
-							</p>
-
-							<p><a href="assets/resume.pdf" class="button">Download Resume</a></p>
-
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>Open to full-time data analyst and data scientist roles. Feel free to reach out about opportunities, collaborations, or to connect.</p>
-
-							<ul style="list-style:none; padding:0;">
-								<li><strong>Email:</strong> <a href="mailto:aaryabhivsanee@gmail.com">aaryabhivsanee@gmail.com</a></li>
-								<li><strong>Location:</strong> Jersey City, NJ</li>
-								<li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/aarya-bhivsanee">linkedin.com/in/aarya-bhivsanee</a></li>
-								<li><strong>GitHub:</strong> <a href="https://github.com/aarya-7">github.com/aarya-7</a></li>
-							</ul>
-
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-				<ul class="copyright">
-					<li>&copy; Aarya Bhivsanee. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<script>
-				function toggleFindings() {
-					const extras = document.querySelectorAll('.finding-extra');
-					const btn = document.getElementById('findings-toggle');
-					const isHidden = extras[0].style.display === 'none';
-
-					extras.forEach(card => {
-						card.style.display = isHidden ? 'block' : 'none';
-					});
-
-					btn.textContent = isHidden ? 'Show Less' : 'Show More';
-				}
-			</script>
-
-	</body>
+</body>
 </html>
