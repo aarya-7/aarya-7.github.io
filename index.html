@@ -44,7 +44,7 @@
             <i class="fab fa-github"></i>
             <span>github.com/aarya-7</span>
           </a>
-          <a href="assets/resume.pdf" download class="sidebar-link resume-link">
+          <a href="Resume_AaryaBhivsanee.pdf" download class="sidebar-link resume-link">
             <i class="fas fa-download"></i>
             <span>Download Resume</span>
           </a>
@@ -57,7 +57,7 @@
   <!-- ─── Top Nav (centered, hides on scroll) ──────────────────── -->
   <nav id="topnav">
     <div class="nav-pill">
-      <a href="#hero"       class="nav-item active" data-tooltip="Home">       <i class="fas fa-house"></i></a>
+      <a href="#about"      class="nav-item active" data-tooltip="About">      <i class="fas fa-user"></i></a>
       <a href="#projects"   class="nav-item"        data-tooltip="Projects">   <i class="fas fa-folder-open"></i></a>
       <a href="#skills"     class="nav-item"        data-tooltip="Skills">     <i class="fas fa-layer-group"></i></a>
       <a href="#experience" class="nav-item"        data-tooltip="Experience"> <i class="fas fa-briefcase"></i></a>
@@ -69,30 +69,36 @@
   <!-- ─── Main Content (scrollable right 60%) ──────────────────── -->
   <main id="main">
 
-    <!-- Hero -->
-    <section id="hero" class="section">
+    <!-- About -->
+    <section id="about" class="section">
       <div class="section-title">
-        <span class="title-solid">DATA ANALYST</span>
-        <span class="title-ghost">&amp; SCIENTIST</span>
+        <span class="title-solid">ABOUT</span>
+        <span class="title-ghost">ME</span>
       </div>
-      <p class="hero-desc">
-        Building analytics systems that surface revenue risk, customer churn signals,
-        and conversion gaps. M.S. Data Science candidate at Stevens Institute of Technology,
-        turning raw data into decisions teams can act on.
-      </p>
-      <div class="stats-row">
-        <div class="stat">
-          <span class="stat-num">1.7M+</span>
-          <span class="stat-label">Sessions Analyzed</span>
+      <div class="about-content">
+        <p class="about-lead">
+          I work in data analytics, and the thread running through everything I do is customer behavior &mdash; specifically why people stop doing the thing they were doing.
+        </p>
+        <p class="about-body">
+          Churn, cart abandonment, a sudden revenue drop &mdash; it&rsquo;s all the same instinct to me: finding the exact moment things broke, and why. Sometimes that moment is earlier than expected.
+        </p>
+        <div class="about-stories">
+          <div class="about-story">
+            <span class="about-story-label">E-commerce Funnel</span>
+            <p>Everyone assumed the biggest drop-off was at checkout. It wasn&rsquo;t. The real collapse happened much earlier &mdash; at the point where browsing was supposed to turn into intent.</p>
+          </div>
+          <div class="about-story">
+            <span class="about-story-label">SaaS Churn</span>
+            <p>The pattern that stuck with me wasn&rsquo;t the churn rate itself &mdash; it was that the customers we lost were worth more on average than the ones we kept. Concentrated in mid-sized accounts: big enough to matter, small enough that nobody was personally watching them. That reframed churn as an attention problem, not just a product problem.</p>
+          </div>
+          <div class="about-story">
+            <span class="about-story-label">Revenue Anomalies</span>
+            <p>Flagging the weird days was never the hard part. Explaining them was. So the system didn&rsquo;t just say revenue dropped &mdash; it said which category caused it.</p>
+          </div>
         </div>
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Analytics Projects</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">500+</span>
-          <span class="stat-label">Accounts Tracked</span>
-        </div>
+        <p class="about-closing">
+          I&rsquo;m exploring data analyst and product analyst roles &mdash; anywhere that wants someone who treats numbers as a way to understand people, not just report on them.
+        </p>
       </div>
     </section>
 
@@ -104,32 +110,41 @@
       </div>
       <div class="project-list">
 
-        <a href="https://github.com/aarya-7/retail_rocket-funnel_analytics" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card">
           <img src="images/proj1.jpg" alt="E-commerce Funnel Analysis" class="project-thumb" />
           <div class="project-info">
-            <h3>E-commerce Funnel Analysis</h3>
-            <p>Analyzed 1.7 million user sessions to locate where revenue was leaking across the checkout funnel. Quantified drop-off at each stage from View to Cart to Transaction, then proposed 3 A/B tests targeting cart recovery, product page clarity, and category UX with defined primary and guardrail metrics. Delivered 4 Tableau dashboards covering funnel health, segmentation, and time-to-convert.</p>
+            <h3><a href="https://github.com/aarya-7/retail_rocket-funnel_analytics" target="_blank" rel="noopener">E-commerce Funnel Analysis <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
+            <ul>
+              <li>Pinpointed the primary revenue leak at View&rarr;Cart (2.21% conversion, 97.79% drop) rather than checkout &mdash; shifting optimization priority to the product page and add-to-cart experience across 1.76M sessions</li>
+              <li>Found returning visitors converted at 3&times; the rate of new visitors during peak hours, informing 3 A/B tests (PDP clarity, category UX, cart recovery) with defined primary and guardrail metrics</li>
+              <li>Built a session-level clickstream mart in PostgreSQL (sessionization, window functions) and delivered 4 Tableau dashboards covering funnel health, segmentation, and time-to-convert</li>
+            </ul>
           </div>
-          <i class="fas fa-arrow-up-right project-arrow"></i>
-        </a>
+        </div>
 
-        <a href="https://github.com/aarya-7/REPO-NAME" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card">
           <img src="images/proj2.jpg" alt="GMV Anomaly Detection" class="project-thumb" />
           <div class="project-info">
-            <h3>GMV Anomaly Detection &amp; Attribution</h3>
-            <p>Built a revenue monitoring system that automatically flags abnormal GMV movements before they escalate. Detected 17 anomalies across 409 days and classified each by severity and spike or drop direction. An interactive Tableau drill-down dashboard attributes each anomaly to specific product categories, giving revenue teams the context to act quickly.</p>
+            <h3><a href="https://github.com/aarya-7/gmv-narrator" target="_blank" rel="noopener">GMV Anomaly Detection &amp; Attribution <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
+            <ul>
+              <li>Reduced time-to-root-cause from hours to zero by engineering a pipeline that detects, decomposes, and narrates GMV anomalies automatically &mdash; surfacing 12 flagged revenue events across 18 months with severity tagging and category attribution</li>
+              <li>Eliminated analyst write-up time by constraining an LLM to pre-computed fact packets only, producing auditable What/Why/Action briefs &mdash; a +558% Black Friday spike (z=29.79) attributed to Southeast Brazil at 72% of total delta with no manual query</li>
+              <li>Improved detection robustness over standard deviation using MAD-based robust z-scores on detrended residuals, validated against 3 synthetic stress-test shocks</li>
+            </ul>
           </div>
-          <i class="fas fa-arrow-up-right project-arrow"></i>
-        </a>
+        </div>
 
-        <a href="https://github.com/aarya-7/Saas-retention-churn-early-warning" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card">
           <img src="images/proj3.jpg" alt="SaaS Retention & Churn Analytics" class="project-thumb" />
           <div class="project-info">
-            <h3>SaaS Retention &amp; Churn Analytics</h3>
-            <p>Designed a churn prevention system across 500 accounts that identifies at-risk customers before they cancel. Cohort retention tracked at M1 (90.1%), M3 (76.5%), and M6 (57.4%) showed where drop-off concentrated. A behavioral early warning model produces risk bands and churn reason codes, giving customer success teams a prioritized list for proactive outreach.</p>
+            <h3><a href="https://github.com/aarya-7/Saas-retention-churn-early-warning" target="_blank" rel="noopener">SaaS Retention &amp; Churn Analytics <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
+            <ul>
+              <li>Quantified $9.9M total paid MRR against an 8.02% weighted churn rate, isolating the 21&ndash;50 seat segment ($165K churned MRR, highest of any range) as the concentration point &mdash; reframing churn as an attention problem in mid-market accounts</li>
+              <li>Validated risk-band scoring against actual churn across 500 accounts: HIGH-risk churned at 50% vs. 15% (MEDIUM) and 7% (LOW), driven primarily by usage drop and elevated error rate</li>
+              <li>Identified the first 90 days as the primary churn lever via cohort retention (M1: 90.1%, M3: 76.5%, M6: 57.4%), pointing retention strategy toward onboarding fixes over long-term engagement programs</li>
+            </ul>
           </div>
-          <i class="fas fa-arrow-up-right project-arrow"></i>
-        </a>
+        </div>
 
       </div>
     </section>
@@ -216,7 +231,7 @@
         <div class="exp-card">
           <div class="exp-header">
             <h3>Graduate Peer Leader</h3>
-            <span class="exp-date">Aug 2025 &ndash; Present</span>
+            <span class="exp-date">Aug 2025 &ndash; May 2026</span>
           </div>
           <p class="exp-company">Stevens Institute of Technology &middot; Hoboken, NJ</p>
           <ul class="exp-bullets">
