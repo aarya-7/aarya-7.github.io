@@ -62,7 +62,6 @@
       <a href="#skills"     class="nav-item"        data-tooltip="Skills">     <i class="fas fa-layer-group"></i></a>
       <a href="#experience" class="nav-item"        data-tooltip="Experience"> <i class="fas fa-briefcase"></i></a>
       <a href="#findings"   class="nav-item"        data-tooltip="Findings">   <i class="fas fa-pen-nib"></i></a>
-      <a href="#tableau"    class="nav-item"        data-tooltip="Tableau">    <i class="fas fa-chart-bar"></i></a>
     </div>
   </nav>
 
@@ -83,7 +82,7 @@
           Sometimes that moment is earlier than expected. On an e-commerce funnel project, everyone assumed the biggest drop-off was at checkout, it wasn't, the real collapse happened much earlier, at the point where browsing was supposed to turn into intent. On a SaaS churn project, the pattern that stuck with me wasn't the churn rate itself, it was that the customers we lost were worth more on average than the ones we kept, concentrated in mid-sized accounts that were big enough to matter but small enough that nobody was personally watching them. That reframed churn for me as an attention problem, not just a product problem. And on a revenue anomaly system I built, flagging the weird days was never the hard part, explaining them was, so the system didn't just say revenue dropped, it said which category caused it.
         </p>
         <p class="about-closing">
-          I'm exploring data analyst and product analyst roles, anywhere that wants someone who treats numbers as a way to understand people, not just report on them.
+          Currently exploring Data Analyst, Business Analyst and Product Analyst roles.
         </p>
       </div>
     </section>
@@ -100,10 +99,7 @@
           <img src="images/proj1.jpg" alt="E-commerce Funnel Analysis" class="project-thumb" />
           <div class="project-info">
             <h3><a href="https://github.com/aarya-7/retail_rocket-funnel_analytics" target="_blank" rel="noopener">E-commerce Funnel Analysis <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
-            <ul>
-              <li>Found the primary revenue leak at View to Cart (2.21% conversion) rather than checkout across 1.76M sessions, built into a clickstream mart using PostgreSQL sessionization and window functions</li>
-              <li>Returning visitors converted at 3x the rate of new visitors, informing 3 A/B tests on PDP clarity, category UX, and cart recovery, delivered across 4 Tableau dashboards</li>
-            </ul>
+            <p>Analyzed 1.76M sessions in PostgreSQL to locate the primary revenue leak at View to Cart (2.21% conversion), not checkout. Returning visitors converted at 3x the rate of new users, informing 3 A/B tests delivered across 4 Tableau dashboards.</p>
           </div>
         </div>
 
@@ -111,10 +107,7 @@
           <img src="images/proj2.jpg" alt="GMV Anomaly Detection" class="project-thumb" />
           <div class="project-info">
             <h3><a href="https://github.com/aarya-7/gmv-narrator" target="_blank" rel="noopener">GMV Anomaly Detection &amp; Attribution <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
-            <ul>
-              <li>Built a Python and PostgreSQL pipeline that flags, decomposes, and narrates GMV anomalies automatically, surfacing 12 revenue events across 18 months with severity tagging and category attribution</li>
-              <li>Used MAD-based robust z-scores on detrended residuals for detection, and constrained an LLM to pre-computed fact packets to generate auditable What/Why/Action briefs with no manual query required</li>
-            </ul>
+            <p>Built a Python and PostgreSQL pipeline that flags, decomposes, and narrates GMV anomalies automatically, surfacing 12 revenue events across 18 months. Used MAD-based z-scores for robust detection and constrained an LLM to generate auditable What/Why/Action briefs with no manual query.</p>
           </div>
         </div>
 
@@ -122,10 +115,7 @@
           <img src="images/proj3.jpg" alt="SaaS Retention & Churn Analytics" class="project-thumb" />
           <div class="project-info">
             <h3><a href="https://github.com/aarya-7/Saas-retention-churn-early-warning" target="_blank" rel="noopener">SaaS Retention &amp; Churn Analytics <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
-            <ul>
-              <li>Quantified $9.9M paid MRR against an 8.02% churn rate, isolating the 21 to 50 seat segment ($165K churned MRR) as the concentration point using cohort analysis and risk-band scoring across 500 accounts</li>
-              <li>Validated risk scores against actual outcomes: HIGH-risk churned at 50% vs. 15% (MEDIUM), driven by usage drop. Cohort retention (M1: 90.1%, M6: 57.4%) pointed to onboarding as the primary fix</li>
-            </ul>
+            <p>Quantified $9.9M paid MRR against an 8.02% churn rate across 500 accounts, isolating the 21 to 50 seat segment ($165K churned MRR) as the concentration point. Risk-band scoring validated against actual outcomes: HIGH-risk churned at 50% vs. 15% for MEDIUM accounts.</p>
           </div>
         </div>
 
@@ -287,34 +277,6 @@
       </div>
     </section>
 
-    <!-- Tableau Dashboards -->
-    <section id="tableau" class="section">
-      <div class="section-title">
-        <span class="title-solid">TABLEAU</span>
-        <span class="title-ghost">DASHBOARDS</span>
-      </div>
-      <div class="tableau-list">
-
-        <div class="tableau-item">
-          <h3>E-commerce Funnel Dashboard</h3>
-          <!-- PASTE TABLEAU EMBED CODE HERE -->
-          <div class="tableau-placeholder">Paste Tableau embed code here</div>
-        </div>
-
-        <div class="tableau-item">
-          <h3>GMV Anomaly Detection Dashboard</h3>
-          <!-- PASTE TABLEAU EMBED CODE HERE -->
-          <div class="tableau-placeholder">Paste Tableau embed code here</div>
-        </div>
-
-        <div class="tableau-item">
-          <h3>SaaS Retention Dashboard</h3>
-          <!-- PASTE TABLEAU EMBED CODE HERE -->
-          <div class="tableau-placeholder">Paste Tableau embed code here</div>
-        </div>
-
-      </div>
-    </section>
 
   </main>
 
