@@ -68,13 +68,14 @@ a { text-decoration: none; }
   color: #fff;
   line-height: 1.15;
   letter-spacing: -0.5px;
+  margin-bottom: 12px;
 }
 
 .sidebar-subtitle {
   font-size: 0.78rem;
   color: var(--text-muted);
   line-height: 1.4;
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 .sidebar-links {
