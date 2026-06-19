@@ -77,27 +77,13 @@
       </div>
       <div class="about-content">
         <p class="about-lead">
-          I work in data analytics, and the thread running through everything I do is customer behavior &mdash; specifically why people stop doing the thing they were doing.
+          I work in data analytics, and the thread running through everything I do is customer behavior, specifically why people stop doing the thing they were doing. Churn, cart abandonment, a sudden revenue drop, it's all the same instinct to me, finding the exact moment things broke, and why.
         </p>
         <p class="about-body">
-          Churn, cart abandonment, a sudden revenue drop &mdash; it&rsquo;s all the same instinct to me: finding the exact moment things broke, and why. Sometimes that moment is earlier than expected.
+          Sometimes that moment is earlier than expected. On an e-commerce funnel project, everyone assumed the biggest drop-off was at checkout, it wasn't, the real collapse happened much earlier, at the point where browsing was supposed to turn into intent. On a SaaS churn project, the pattern that stuck with me wasn't the churn rate itself, it was that the customers we lost were worth more on average than the ones we kept, concentrated in mid-sized accounts that were big enough to matter but small enough that nobody was personally watching them. That reframed churn for me as an attention problem, not just a product problem. And on a revenue anomaly system I built, flagging the weird days was never the hard part, explaining them was, so the system didn't just say revenue dropped, it said which category caused it.
         </p>
-        <div class="about-stories">
-          <div class="about-story">
-            <span class="about-story-label">E-commerce Funnel</span>
-            <p>Everyone assumed the biggest drop-off was at checkout. It wasn&rsquo;t. The real collapse happened much earlier &mdash; at the point where browsing was supposed to turn into intent.</p>
-          </div>
-          <div class="about-story">
-            <span class="about-story-label">SaaS Churn</span>
-            <p>The pattern that stuck with me wasn&rsquo;t the churn rate itself &mdash; it was that the customers we lost were worth more on average than the ones we kept. Concentrated in mid-sized accounts: big enough to matter, small enough that nobody was personally watching them. That reframed churn as an attention problem, not just a product problem.</p>
-          </div>
-          <div class="about-story">
-            <span class="about-story-label">Revenue Anomalies</span>
-            <p>Flagging the weird days was never the hard part. Explaining them was. So the system didn&rsquo;t just say revenue dropped &mdash; it said which category caused it.</p>
-          </div>
-        </div>
         <p class="about-closing">
-          I&rsquo;m exploring data analyst and product analyst roles &mdash; anywhere that wants someone who treats numbers as a way to understand people, not just report on them.
+          I'm exploring data analyst and product analyst roles, anywhere that wants someone who treats numbers as a way to understand people, not just report on them.
         </p>
       </div>
     </section>
@@ -115,9 +101,8 @@
           <div class="project-info">
             <h3><a href="https://github.com/aarya-7/retail_rocket-funnel_analytics" target="_blank" rel="noopener">E-commerce Funnel Analysis <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
             <ul>
-              <li>Pinpointed the primary revenue leak at View&rarr;Cart (2.21% conversion, 97.79% drop) rather than checkout &mdash; shifting optimization priority to the product page and add-to-cart experience across 1.76M sessions</li>
-              <li>Found returning visitors converted at 3&times; the rate of new visitors during peak hours, informing 3 A/B tests (PDP clarity, category UX, cart recovery) with defined primary and guardrail metrics</li>
-              <li>Built a session-level clickstream mart in PostgreSQL (sessionization, window functions) and delivered 4 Tableau dashboards covering funnel health, segmentation, and time-to-convert</li>
+              <li>Found the primary revenue leak at View to Cart (2.21% conversion) rather than checkout across 1.76M sessions, built into a clickstream mart using PostgreSQL sessionization and window functions</li>
+              <li>Returning visitors converted at 3x the rate of new visitors, informing 3 A/B tests on PDP clarity, category UX, and cart recovery, delivered across 4 Tableau dashboards</li>
             </ul>
           </div>
         </div>
@@ -127,9 +112,8 @@
           <div class="project-info">
             <h3><a href="https://github.com/aarya-7/gmv-narrator" target="_blank" rel="noopener">GMV Anomaly Detection &amp; Attribution <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
             <ul>
-              <li>Reduced time-to-root-cause from hours to zero by engineering a pipeline that detects, decomposes, and narrates GMV anomalies automatically &mdash; surfacing 12 flagged revenue events across 18 months with severity tagging and category attribution</li>
-              <li>Eliminated analyst write-up time by constraining an LLM to pre-computed fact packets only, producing auditable What/Why/Action briefs &mdash; a +558% Black Friday spike (z=29.79) attributed to Southeast Brazil at 72% of total delta with no manual query</li>
-              <li>Improved detection robustness over standard deviation using MAD-based robust z-scores on detrended residuals, validated against 3 synthetic stress-test shocks</li>
+              <li>Built a Python and PostgreSQL pipeline that flags, decomposes, and narrates GMV anomalies automatically, surfacing 12 revenue events across 18 months with severity tagging and category attribution</li>
+              <li>Used MAD-based robust z-scores on detrended residuals for detection, and constrained an LLM to pre-computed fact packets to generate auditable What/Why/Action briefs with no manual query required</li>
             </ul>
           </div>
         </div>
@@ -139,9 +123,8 @@
           <div class="project-info">
             <h3><a href="https://github.com/aarya-7/Saas-retention-churn-early-warning" target="_blank" rel="noopener">SaaS Retention &amp; Churn Analytics <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
             <ul>
-              <li>Quantified $9.9M total paid MRR against an 8.02% weighted churn rate, isolating the 21&ndash;50 seat segment ($165K churned MRR, highest of any range) as the concentration point &mdash; reframing churn as an attention problem in mid-market accounts</li>
-              <li>Validated risk-band scoring against actual churn across 500 accounts: HIGH-risk churned at 50% vs. 15% (MEDIUM) and 7% (LOW), driven primarily by usage drop and elevated error rate</li>
-              <li>Identified the first 90 days as the primary churn lever via cohort retention (M1: 90.1%, M3: 76.5%, M6: 57.4%), pointing retention strategy toward onboarding fixes over long-term engagement programs</li>
+              <li>Quantified $9.9M paid MRR against an 8.02% churn rate, isolating the 21 to 50 seat segment ($165K churned MRR) as the concentration point using cohort analysis and risk-band scoring across 500 accounts</li>
+              <li>Validated risk scores against actual outcomes: HIGH-risk churned at 50% vs. 15% (MEDIUM), driven by usage drop. Cohort retention (M1: 90.1%, M6: 57.4%) pointed to onboarding as the primary fix</li>
             </ul>
           </div>
         </div>
