@@ -70,54 +70,52 @@ a { text-decoration: none; }
   letter-spacing: -0.5px;
 }
 
-.sidebar-role {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-top: -12px;
-}
-
-.sidebar-bio {
-  font-size: 0.85rem;
+.sidebar-subtitle {
+  font-size: 0.78rem;
   color: var(--text-muted);
-  line-height: 1.7;
-  border-top: 1px solid var(--border);
-  padding-top: 18px;
+  line-height: 1.4;
+  margin-top: -8px;
 }
 
 .sidebar-links {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .sidebar-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.8rem;
+  justify-content: center;
   color: var(--text-muted);
-  transition: color 0.2s;
-  line-height: 1;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .sidebar-link i {
-  width: 14px;
-  font-size: 0.78rem;
-  color: var(--accent);
+  font-size: 0.82rem;
+  color: inherit;
   flex-shrink: 0;
 }
 
-.sidebar-link:hover { color: #fff; }
+.sidebar-link:hover {
+  color: var(--accent);
+  border-color: rgba(249, 115, 22, 0.5);
+}
 
 .sidebar-link.resume-link {
   color: var(--accent);
-  font-weight: 600;
+  border-color: rgba(249, 115, 22, 0.4);
 }
 
-.sidebar-link.resume-link:hover { color: var(--accent-light); }
+.sidebar-link.resume-link:hover {
+  color: var(--accent-light);
+  border-color: var(--accent-light);
+}
 
 /* ─── Top Nav (centered, auto-hides on scroll) ───────────────────── */
 #topnav {
@@ -557,27 +555,6 @@ a { text-decoration: none; }
   }
 
   .sidebar-name { font-size: 1.2rem; }
-  .sidebar-role { margin-top: -4px; }
-  .sidebar-bio { display: none; }
-
-  .sidebar-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding-top: 0;
-    border-top: none;
-  }
-
-  .sidebar-link span { display: none; }
-  .sidebar-link i { width: auto; font-size: 0.9rem; }
-
-  .sidebar-link {
-    width: 34px;
-    height: 34px;
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    justify-content: center;
-  }
 
   #main { margin-left: 0; }
 
