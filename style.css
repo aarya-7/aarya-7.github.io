@@ -492,6 +492,22 @@ a { text-decoration: none; }
 
 .finding-card:hover .finding-arrow { transform: translate(2px, -2px); }
 
+.finding-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.finding-links a {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.finding-links a:hover { color: var(--accent-light); }
+
 
 /* ─── Footer ─────────────────────────────────────────────────────── */
 #footer {
