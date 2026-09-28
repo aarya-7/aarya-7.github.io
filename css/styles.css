@@ -4792,15 +4792,9 @@ img.u-pull-left {
     text-align : center;
 }
 
-.s-about-block--outside::after {
-    content : "";
-    display : block;
-    clear   : both;
-}
-
 /* this section's column shares the intro section's un-capped width so
- * its 65%/650px photo treatment resolves to the same pixel size, and
- * the wrapped text column gets the same line length as the section above */
+ * its photo treatment resolves to a comparably generous pixel size, and
+ * the text column gets a similarly wide line length as the section above */
 .s-about-block--outside .about-section {
     max-width : none;
 }
@@ -4809,11 +4803,18 @@ img.u-pull-left {
     text-align : right;
 }
 
+/* flexbox (not float) so the image and the wrapped text can never mismatch
+ * in height and break out of the row, and so both can be vertically centered
+ * against each other regardless of which one is taller */
+.outside-work-row {
+    display     : flex;
+    align-items : center;
+    gap         : var(--vspace-2);
+}
+
 .outside-work-photo {
-    float         : left;
-    width         : 63.5375%;
+    flex          : 0 0 63.5375%;
     max-width     : 635.375px;
-    margin        : 0 var(--vspace-2) var(--vspace-1_5) 0;
     border        : 1px solid rgba(255, 255, 255, .12);
     border-radius : var(--border-radius);
     overflow      : hidden;
@@ -4825,12 +4826,20 @@ img.u-pull-left {
     height  : auto;
 }
 
+.outside-work-row p {
+    flex : 1 1 auto;
+}
+
 @media screen and (max-width: 700px) {
+    .outside-work-row {
+        flex-direction : column;
+        align-items    : stretch;
+        gap            : var(--vspace-1_5);
+    }
+
     .outside-work-photo {
-        float     : none;
-        width     : 100%;
+        flex      : 0 0 auto;
         max-width : none;
-        margin    : var(--vspace-1) 0 var(--vspace-1_5) 0;
     }
 }
 
