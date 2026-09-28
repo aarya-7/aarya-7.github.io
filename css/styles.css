@@ -4805,10 +4805,14 @@ img.u-pull-left {
     max-width : none;
 }
 
+.s-about-block--outside .about-section p {
+    text-align : right;
+}
+
 .outside-work-photo {
     float         : left;
-    width         : 55.25%;
-    max-width     : 552.5px;
+    width         : 63.5375%;
+    max-width     : 635.375px;
     margin        : 0 var(--vspace-2) var(--vspace-1_5) 0;
     border        : 1px solid rgba(255, 255, 255, .12);
     border-radius : var(--border-radius);
