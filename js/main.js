@@ -379,6 +379,79 @@
     }; // end ssFolioShowMore
 
 
+   /* quotes carousel — continuous distance-based scale/opacity
+    * ------------------------------------------------------ */
+    const ssQuotesCarouselScale = function() {
+
+        const viewport = document.querySelector('.quotes-carousel__viewport');
+        const cards = document.querySelectorAll('.quote-card');
+        if (!(viewport && cards.length)) return;
+
+        const MAX_SCALE   = 1.18;
+        const MIN_SCALE   = 0.85;
+        const SCALE_STEP  = 0.25;
+
+        const MAX_OPACITY   = 1;
+        const MIN_OPACITY   = 0.35;
+        const OPACITY_STEP  = 0.28;
+
+        let ticking = true;
+
+        function frame() {
+            if (!ticking) return;
+
+            const viewportRect = viewport.getBoundingClientRect();
+            const viewportCenter = viewportRect.left + viewportRect.width / 2;
+
+            // read pass: measure every card's live position first...
+            const measurements = [];
+            cards.forEach(function(card) {
+                const rect = card.getBoundingClientRect();
+                const cardCenter = rect.left + rect.width / 2;
+                measurements.push({ card: card, distancePx: Math.abs(cardCenter - viewportCenter) });
+            });
+
+            // getBoundingClientRect().width reflects layout size, not the
+            // transform:scale() already applied, so this stays a stable
+            // reference regardless of each card's current scale
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const trackGap = parseFloat(getComputedStyle(cards[0].parentElement).columnGap) || 0;
+            const slotStep = cardWidth + trackGap;
+
+            // ...write pass: apply the derived scale/opacity, kept separate
+            // from the read pass above so measuring never forces a reflow
+            // against a style we just wrote a moment ago
+            measurements.forEach(function(m) {
+                const distanceFromCenter = slotStep ? m.distancePx / slotStep : 0;
+
+                const scale = Math.max(MAX_SCALE - (distanceFromCenter * SCALE_STEP), MIN_SCALE);
+                const opacity = Math.max(MAX_OPACITY - (distanceFromCenter * OPACITY_STEP), MIN_OPACITY);
+
+                m.card.style.setProperty('--card-scale', scale.toFixed(3));
+                m.card.style.setProperty('--card-opacity', opacity.toFixed(3));
+            });
+
+            requestAnimationFrame(frame);
+        }
+
+        // only run the per-frame measuring loop while the carousel is
+        // actually on screen, so it costs nothing while scrolled past
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !ticking) {
+                    ticking = true;
+                    requestAnimationFrame(frame);
+                } else if (!entry.isIntersecting) {
+                    ticking = false;
+                }
+            });
+        });
+
+        observer.observe(viewport);
+
+    }; // end ssQuotesCarouselScale
+
+
    /* alert boxes
     * ------------------------------------------------------ */
     const ssAlertBoxes = function() {
@@ -458,6 +531,7 @@
         ssProjectDetail();
         ssVideoLightbox();
         ssFolioShowMore();
+        ssQuotesCarouselScale();
         ssAlertBoxes();
         ssMoveTo();
 

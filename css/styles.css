@@ -4886,8 +4886,8 @@ img.u-pull-left {
  * ## quotes carousel (continuous marquee)
  * ------------------------------------------------------------------- */
 .quotes-carousel {
-    --quote-card-w  : 320px;
-    --quote-card-h  : 220px;
+    --quote-card-w  : 368px;
+    --quote-card-h  : 253px;
 
     position  : relative;
     max-width : 1100px;
@@ -4930,9 +4930,15 @@ img.u-pull-left {
     border           : 1px solid rgba(255, 255, 255, .12);
     border-radius    : var(--border-radius);
     text-align       : center;
-    transition       : transform .4s cubic-bezier(0.25, 0.1, 0.25, 1),
-                        opacity .4s cubic-bezier(0.25, 0.1, 0.25, 1),
-                        box-shadow .4s cubic-bezier(0.25, 0.1, 0.25, 1),
+    /* --card-scale/--card-opacity are written every animation frame by
+     * ssQuotesCarouselScale() in main.js, based on live distance from the
+     * viewport's center — intentionally no transition here so the scale
+     * stays perfectly locked to the card's real position, no lag chasing
+     * a moving target. transform/opacity get a transition added back in
+     * (see hover rules below) only for the discrete hover state change. */
+    transform        : scale(var(--card-scale, 1));
+    opacity          : var(--card-opacity, 1);
+    transition       : box-shadow .4s cubic-bezier(0.25, 0.1, 0.25, 1),
                         border-color .4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -4980,15 +4986,26 @@ img.u-pull-left {
     }
 
     .quotes-carousel:hover .quote-card {
-        opacity : .65;
+        opacity    : .65;
+        transition : transform .4s cubic-bezier(0.25, 0.1, 0.25, 1),
+                      opacity .4s cubic-bezier(0.25, 0.1, 0.25, 1),
+                      box-shadow .4s cubic-bezier(0.25, 0.1, 0.25, 1),
+                      border-color .4s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 
-    .quote-card:hover {
+    /* needs to out-specificity ".quotes-carousel:hover .quote-card" above
+     * (which dims every card at (0,3,0)) — plain ".quote-card:hover" is only
+     * (0,2,0) and loses that fight, so the hovered card would stay dimmed */
+    .quotes-carousel:hover .quote-card:hover {
         opacity      : 1;
         z-index      : 2;
         border-color : var(--color-1);
         box-shadow   : 0 20px 40px -12px rgba(0, 0, 0, .55), 0 0 0 1px var(--color-1), 0 0 32px rgba(180, 80, 42, .35);
         transform    : scale(1.18);
+        transition   : transform .4s cubic-bezier(0.25, 0.1, 0.25, 1),
+                        opacity .4s cubic-bezier(0.25, 0.1, 0.25, 1),
+                        box-shadow .4s cubic-bezier(0.25, 0.1, 0.25, 1),
+                        border-color .4s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 }
 
@@ -5001,15 +5018,15 @@ img.u-pull-left {
         transition : opacity .2s ease, box-shadow .2s ease, border-color .2s ease;
     }
 
-    .quote-card:hover {
+    .quotes-carousel:hover .quote-card:hover {
         transform : none;
     }
 }
 
 @media screen and (max-width: 600px) {
     .quotes-carousel {
-        --quote-card-w : 76vw;
-        --quote-card-h : 240px;
+        --quote-card-w : 87.4vw;
+        --quote-card-h : 276px;
     }
 }
 
