@@ -1,0 +1,25 @@
+<svg width="1050" height="700" viewBox="0 0 1050 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1050" height="700" fill="#101112"/>
+  <text x="70" y="90" font-family="Manrope, sans-serif" font-size="28" fill="#5b5b5c" letter-spacing="2">COHORT RETENTION</text>
+
+  <!-- retention curve -->
+  <polyline points="90,220 260,300 430,360 600,405 770,435 940,455" fill="none" stroke="#e0cd8f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="90" cy="220" r="9" fill="#e0cd8f"/>
+  <circle cx="260" cy="300" r="9" fill="#e0cd8f"/>
+  <circle cx="430" cy="360" r="9" fill="#e0cd8f"/>
+  <circle cx="600" cy="405" r="9" fill="#e0cd8f"/>
+  <circle cx="770" cy="435" r="9" fill="#e0cd8f"/>
+  <circle cx="940" cy="455" r="9" fill="#e0cd8f"/>
+
+  <!-- baseline -->
+  <line x1="70" y1="520" x2="980" y2="520" stroke="#2c2c2d" stroke-width="2"/>
+
+  <!-- risk band bars -->
+  <rect x="120" y="560" width="90" height="80" fill="#B4502A"/>
+  <rect x="260" y="540" width="90" height="100" fill="#C97232"/>
+  <rect x="400" y="480" width="90" height="160" fill="#e0cd8f"/>
+
+  <text x="120" y="665" font-family="Inter, sans-serif" font-size="20" fill="#8a8a8b">LOW</text>
+  <text x="262" y="665" font-family="Inter, sans-serif" font-size="20" fill="#8a8a8b">MEDIUM</text>
+  <text x="405" y="665" font-family="Inter, sans-serif" font-size="20" fill="#8a8a8b">HIGH</text>
+</svg>

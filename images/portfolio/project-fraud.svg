@@ -1,0 +1,28 @@
+<svg width="1050" height="700" viewBox="0 0 1050 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1050" height="700" fill="#101112"/>
+  <text x="70" y="90" font-family="Manrope, sans-serif" font-size="28" fill="#5b5b5c" letter-spacing="2">ROC CURVE</text>
+
+  <!-- axes -->
+  <line x1="120" y1="580" x2="920" y2="580" stroke="#2c2c2d" stroke-width="2"/>
+  <line x1="120" y1="580" x2="120" y2="140" stroke="#2c2c2d" stroke-width="2"/>
+  <text x="70" y="150" font-family="Inter, sans-serif" font-size="16" fill="#5b5b5c">TPR</text>
+  <text x="880" y="620" font-family="Inter, sans-serif" font-size="16" fill="#5b5b5c">FPR</text>
+
+  <!-- random baseline -->
+  <line x1="120" y1="580" x2="920" y2="140" stroke="#5b5b5c" stroke-width="2" stroke-dasharray="8 8"/>
+
+  <!-- model curves -->
+  <path d="M120,580 C 200,300 300,180 920,150" fill="none" stroke="#e0cd8f" stroke-width="5"/>
+  <path d="M120,580 C 220,340 340,220 920,175" fill="none" stroke="#B4502A" stroke-width="5"/>
+  <path d="M120,580 C 260,400 420,270 920,210" fill="none" stroke="#E8A33D" stroke-width="5"/>
+
+  <!-- legend -->
+  <circle cx="700" cy="480" r="7" fill="#e0cd8f"/>
+  <text x="720" y="486" font-family="Inter, sans-serif" font-size="18" fill="#e8e8e8">XGBoost · 0.982</text>
+
+  <circle cx="700" cy="515" r="7" fill="#B4502A"/>
+  <text x="720" y="521" font-family="Inter, sans-serif" font-size="18" fill="#e8e8e8">Random Forest · 0.902</text>
+
+  <circle cx="700" cy="550" r="7" fill="#E8A33D"/>
+  <text x="720" y="556" font-family="Inter, sans-serif" font-size="18" fill="#e8e8e8">AdaBoost · 0.870</text>
+</svg>

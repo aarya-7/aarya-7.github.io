@@ -1,323 +1,761 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aarya Bhivsanee | Data Analyst</title>
-  <meta name="description" content="M.S. Data Science candidate at Stevens Institute of Technology. Building analytics systems for revenue intelligence, customer health, and conversion optimization." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aarya Bhivsanee — Data Analyst</title>
+    <meta name="description" content="Aarya Bhivsanee — Data Analyst specializing in churn prediction, funnel optimization, and automated anomaly detection.">
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
 </head>
-<body>
 
-  <!-- ─── Sidebar (fixed left 40%) ─────────────────────────────── -->
-  <aside id="sidebar">
-    <div class="sidebar-inner">
+<body id="top">
 
-      <div class="avatar-wrap">
-        <img src="images/avatar.jpg" alt="Aarya Bhivsanee" />
-      </div>
 
-      <div class="sidebar-right">
-        <h2 class="sidebar-name">Aarya Bhivsanee</h2>
-        <p class="sidebar-subtitle">M.S. Data Science &middot; Stevens Institute of Technology</p>
-
-        <div class="sidebar-links">
-          <a href="mailto:aaryabhivsanee@gmail.com" class="sidebar-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://linkedin.com/in/aarya-bhivsanee" target="_blank" rel="noopener" class="sidebar-link" title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/aarya-7" target="_blank" rel="noopener" class="sidebar-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://public.tableau.com/app/profile/aarya.bhivsanee" target="_blank" rel="noopener" class="sidebar-link" title="Tableau Public">
-            <i class="fas fa-chart-bar"></i>
-          </a>
-          <a href="Resume_AaryaBhivsanee.pdf" download class="sidebar-link resume-link" title="Download Resume">
-            <i class="fas fa-download"></i>
-          </a>
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
         </div>
-      </div>
-
     </div>
-  </aside>
 
-  <!-- ─── Top Nav (centered, hides on scroll) ──────────────────── -->
-  <nav id="topnav">
-    <div class="nav-pill">
-      <a href="#about"      class="nav-item active" data-tooltip="About">      <i class="fas fa-user"></i></a>
-      <a href="#projects"   class="nav-item"        data-tooltip="Projects">   <i class="fas fa-folder-open"></i></a>
-      <a href="#skills"     class="nav-item"        data-tooltip="Skills">     <i class="fas fa-layer-group"></i></a>
-      <a href="#experience" class="nav-item"        data-tooltip="Experience"> <i class="fas fa-briefcase"></i></a>
-      <a href="#findings"   class="nav-item"        data-tooltip="Findings">   <i class="fas fa-pen-nib"></i></a>
-    </div>
-  </nav>
 
-  <!-- ─── Main Content (scrollable right 60%) ──────────────────── -->
-  <main id="main">
+    <!-- page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="section-title">
-        <span class="title-solid">ABOUT</span>
-        <span class="title-ghost">ME</span>
-      </div>
-      <div class="about-content">
-        <p class="about-lead">
-          I work in data analytics, and the thread running through everything I do is customer behavior, specifically why people stop doing the thing they were doing. Churn, cart abandonment, a sudden revenue drop, it's all the same instinct to me, finding the exact moment things broke, and why.
-        </p>
-        <p class="about-body">
-          Sometimes that moment is earlier than expected. On an e-commerce funnel project, everyone assumed the biggest drop-off was at checkout, it wasn't, the real collapse happened much earlier, at the point where browsing was supposed to turn into intent. On a SaaS churn project, the pattern that stuck with me wasn't the churn rate itself, it was that the customers we lost were worth more on average than the ones we kept, concentrated in mid-sized accounts that were big enough to matter but small enough that nobody was personally watching them. That reframed churn for me as an attention problem, not just a product problem. And on a revenue anomaly system I built, flagging the weird days was never the hard part, explaining them was, so the system didn't just say revenue dropped, it said which category caused it.
-        </p>
-        <p class="about-closing">
-          Currently exploring Data Analyst, Business Analyst and Product Analyst roles.
-        </p>
-      </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="section-title">
-        <span class="title-solid">RECENT</span>
-        <span class="title-ghost">PROJECTS</span>
-      </div>
-      <div class="project-list">
 
-        <div class="project-card">
-          <img src="images/proj1.jpg" alt="E-commerce Funnel Analysis" class="project-thumb" />
-          <div class="project-info">
-            <h3><a href="https://github.com/aarya-7/retail_rocket-funnel_analytics" target="_blank" rel="noopener">E-commerce Funnel Analysis <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
-            <p>Analyzed 1.76M sessions in PostgreSQL to locate the primary revenue leak at View to Cart (2.21% conversion), not checkout. Returning visitors converted at 3x the rate of new users, informing 3 A/B tests delivered across 4 Tableau dashboards.</p>
-          </div>
+        <!-- # site header
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="s-header__block">
+                <div class="s-header__logo">
+                    <a class="logo" href="index.html">
+                        <span class="logo__text">Aarya Bhivsanee<span class="logo__accent">.</span></span>
+                    </a>
+                </div>
+
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div> <!-- end s-header__block -->
+
+            <div class="row s-header__nav-wrap">
+                <nav class="s-header__nav">
+                    <ul>
+                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
+                        <li><a href="#skills" class="smoothscroll">Skills</a></li>
+                        <li><a href="#projects" class="smoothscroll">Projects</a></li>
+                        <li><a href="#experience" class="smoothscroll">Experience</a></li>
+                        <li><a href="#contact" class="smoothscroll">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+
+                <ul class="s-header__social">
+                    <li>
+                        <a href="mailto:aaryabhivsanee@gmail.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,6v0.511 l-8,6.223L4,6.512V6H20z M4,18V9.044l7.386,5.745C11.566,14.93,11.783,15,12,15s0.434-0.07,0.614-0.211L20,9.044L20.002,18H4z"></path></svg>
+                            <span class="screen-reader-text">Email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/aarya-bhivsanee" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z"></path></svg>
+                            <span class="screen-reader-text">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/aarya-7" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.305.763-1.605-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path></svg>
+                            <span class="screen-reader-text">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://public.tableau.com/app/profile/aarya.bhivsanee/vizzes" target="_blank" rel="noopener">
+                            <svg class="icon-tableau" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                <g transform="translate(12,4)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(7,8)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(17,8)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(4,12)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(12,12)"><rect x="-0.5" y="-2.6" width="1" height="5.2" rx="0.5" ry="0.5"></rect><rect x="-2.6" y="-0.5" width="5.2" height="1" rx="0.5" ry="0.5"></rect></g>
+                                <g transform="translate(20,12)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(7,16)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(17,16)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(12,20)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                            </svg>
+                            <span class="screen-reader-text">Tableau Public</span>
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- end s-header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- # intro
+        ================================================== -->
+        <section id="intro" class="s-intro target-section">
+
+            <div class="row">
+                <div class="column">
+                    <div class="s-intro__top-block">
+                        <span class="s-intro__bg"></span>
+
+                        <h1 class="s-intro__text" id="js-intro-rotator" aria-live="off">Finding the moment things <b>broke</b> — and the why behind it. <em>The data way.</em></h1>
+
+                        <a href="#skills" class="s-intro__scroll-down smoothscroll">
+                            <span>Scroll Down</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:rotate(180deg);-ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"><path d="M21 11L6.414 11 11.707 5.707 10.293 4.293 2.586 12 10.293 19.707 11.707 18.293 6.414 13 21 13z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-x-center s-intro__about-wrap">
+                <div class="column s-intro__about">
+                    <h2 class="s-intro__about-title">Hi, I'm Aarya Bhivsanee.</h2>
+
+                    <p>
+                    I'm a <span class="s-intro__highlight">Data Science graduate</span> who focuses on why
+                    <span class="s-intro__highlight">users stay</span>, why they
+                    <span class="s-intro__highlight">leave</span>, and what happens in between. Most of my work lives in
+                    <span class="s-intro__highlight">customer retention</span> and
+                    <span class="s-intro__highlight">behavior analysis:</span> spotting accounts
+                    <span class="s-intro__highlight">likely to churn</span>, and mapping exactly where
+                    <span class="s-intro__highlight">users drop off</span> in a product.
+                    I gravitate toward <span class="s-intro__highlight">e-commerce and subscription data</span>, and love to
+                    find the one thing that actually explains <span class="s-intro__highlight">the shift.</span>
+                    Right now I'm looking for roles in <span class="s-intro__highlight">Data Analytics</span>,
+                    <span class="s-intro__highlight">Business Intelligence</span>, or
+                    <span class="s-intro__highlight">Product Analytics</span>.
+                    </p>
+
+                    <a href="Resume_AaryaBhivsanee.pdf" class="s-intro__resume-link" download>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M12 16l5-6h-3V3h-4v7H7l5 6zm-9 2h18v2H3v-2z"></path></svg>
+                        Resume
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="row about-stats stats block-lg-one-fourth block-md-one-half block-mob-whole" data-animate-block>
+
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter="9.9" data-round="10">$<span>0</span>M</div>
+                    <h5>MRR Analyzed</h5>
+                    <p>
+                    $9.9M in paid MRR analyzed against an 8.02% weighted churn rate
+                    across 482 SaaS accounts.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter="50" data-round="1"><span>0</span>%</div>
+                    <h5>High-Risk Churn Rate</h5>
+                    <p>
+                    HIGH-risk accounts churn at 50%, more than 3x the MEDIUM-risk
+                    rate, driven by usage drop and error rate.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter="1.76" data-round="100"><span>0</span>M</div>
+                    <h5>Sessions Analyzed</h5>
+                    <p>
+                    Diagnosed revenue leakage across a 1.76M-session funnel, down to
+                    the exact stage where it broke.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter="3" data-round="1"><span>0</span>x</div>
+                    <h5>Conversion Lift</h5>
+                    <p>
+                    Returning visitors convert at nearly 3x the rate of new visitors.
+                    </p>
+                </div>
+
+            </div> <!-- end about-stats -->
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- # skills
+        ================================================== -->
+        <section id="skills" class="s-services target-section">
+
+            <div class="row section-header has-bottom-sep" data-animate-block>
+                <div class="column lg-12" data-animate-el>
+                    <h3 class="text-pretitle">Skills &amp; Tools</h3>
+                    <h1 class="text-display-title">
+                        What's actually in the toolkit.
+                    </h1>
+                </div>
+            </div> <!-- end section-header -->
+
+            <div class="row services-list block-lg-one-half block-tab-whole" data-animate-block>
+
+                <div class="column service-item" data-animate-el>
+                    <div class="service-icon-block">
+                        <span class="service-icon service-icon--analytics"></span>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">Analytics</h3>
+                        <p>Cohort &amp; retention analysis, funnel analysis, recurring revenue analysis
+                        (MRR, churn rate), KPI design, and A/B testing.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column service-item" data-animate-el>
+                    <div class="service-icon-block">
+                        <span class="service-icon service-icon--sql"></span>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">SQL</h3>
+                        <p>PostgreSQL, MySQL, and Snowflake — joins, window functions, CTEs, and
+                        relational data modeling to query and shape data at scale.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column service-item" data-animate-el>
+                    <div class="service-icon-block">
+                        <span class="service-icon service-icon--python"></span>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">Python</h3>
+                        <p>Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, and SciPy for analysis and
+                        modeling.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column service-item" data-animate-el>
+                    <div class="service-icon-block">
+                        <span class="service-icon service-icon--reporting"></span>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">Reporting &amp; BI</h3>
+                        <p>Tableau and Power BI dashboards, plus Excel and Google Sheets — pivot tables,
+                        VLOOKUP, and financial modeling for stakeholder-ready reporting.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column service-item" data-animate-el>
+                    <div class="service-icon-block">
+                        <span class="service-icon service-icon--datatools"></span>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">Data Tools</h3>
+                        <p>Jupyter Notebook, dbt, and Git/GitHub for reproducible analysis, plus
+                        PowerPoint for clear communication.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column service-item" data-animate-el>
+                    <div class="service-icon-block">
+                        <span class="service-icon service-icon--ai"></span>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">AI-Assisted Workflows</h3>
+                        <p>ChatGPT, Claude, Gemini, and n8n to speed up EDA, automate write-ups, and
+                        prototype analysis pipelines.
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- end services-list -->
+
+        </section> <!-- end s-services -->
+
+
+        <!-- ## projects
+        ================================================== -->
+        <section id="projects" class="s-works target-section">
+
+            <div class="row section-header section-header--dark has-bottom-sep" data-animate-block>
+                <div class="column lg-12" data-animate-el>
+                    <h3 class="text-pretitle">Selected Work</h3>
+                    <h1 class="text-display-title">A few projects where the data caught something worth catching. Take a look.</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+            <div class="row folio-list block-lg-whole" data-animate-block>
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb-wrap">
+                            <div class="folio-item__thumb">
+                                <a class="folio-item__thumb-link" href="images/portfolio/project-churn.svg">
+                                    <img src="images/portfolio/project-churn.svg" alt="Cohort retention and churn risk-band chart">
+                                </a>
+                            </div>
+                            <div class="folio-item__info">
+                                <div class="folio-item__cat">Churn &amp; Retention Analytics</div>
+                                <h4 class="folio-item__title">SaaS Churn Early-Warning System</h4>
+                            </div>
+                            <a href="https://github.com/aarya-7/Saas-retention-churn-early-warning" title="Project Link" class="folio-item__project-link" target="_blank" rel="noopener">Project Link</a>
+                        </div>
+                        <div class="folio-item__caption">
+                            <ul class="disc">
+                                <li>Retention drops fastest in month 1, from 90.1% to 76.5% by month 3, 57.4% by
+                                month 6, making onboarding the highest-leverage window.</li>
+                                <li>The risk model held up, high-risk accounts churned at 50%, over 3x medium
+                                (15%) and 7x low (7%).</li>
+                                <li>Usage drop and error rate were the earliest churn signals, ahead of support
+                                tickets or billing.</li>
+                                <li>$165K of the $9.9M in MRR analyzed sat in Enterprise's 21–50 seat range, the
+                                highest-risk segment for revenue loss.</li>
+                            </ul>
+                        </div>
+                        <div class="folio-item__detail" hidden>
+                            <div class="folio-item__detail-cat">Churn &amp; Retention Analytics</div>
+                            <h3 class="folio-item__detail-title">SaaS Churn Early-Warning System</h3>
+                            <p>RavenStack, a synthetic SaaS company, needed to know not just that churn was
+                            happening, but where it was concentrated and whether a simple, explainable
+                            warning system could actually catch it before the fact.</p>
+                            <p>Working in PostgreSQL, I built cohort retention tracking (M1/M3/M6) to find
+                            where the drop-off actually starts, quantified churned MRR by segment to find
+                            where the dollars were leaking from, and validated a rules-based risk-banding
+                            system — HIGH/MEDIUM/LOW — against real churn outcomes rather than just
+                            theorizing about which signals should matter.</p>
+                            <p>The risk bands held up under validation: HIGH-risk accounts churned at 50%,
+                            more than 3x the MEDIUM-risk rate, with usage drop and error rate emerging as
+                            the earliest, most reliable signals — ahead of anything from support tickets or
+                            billing. The whole thing was packaged into executive-facing Tableau dashboards,
+                            so the answer to "who's at risk and why" didn't require a SQL query every time
+                            someone asked.</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb-wrap">
+                            <div class="folio-item__thumb">
+                                <a class="folio-item__thumb-link" href="images/portfolio/project-funnel.svg">
+                                    <img src="images/portfolio/project-funnel.svg" alt="E-commerce session funnel diagram">
+                                </a>
+                            </div>
+                            <div class="folio-item__info">
+                                <div class="folio-item__cat">Funnel &amp; Conversion Analysis</div>
+                                <h4 class="folio-item__title">E-Commerce Funnel Diagnostics</h4>
+                            </div>
+                            <a href="https://github.com/aarya-7/retail_rocket-funnel_analytics" title="Project Link" class="folio-item__project-link" target="_blank" rel="noopener">Project Link</a>
+                        </div>
+                        <div class="folio-item__caption">
+                            <ul class="disc">
+                                <li>The real leak wasn't checkout, it was one step earlier, 2.21% viewer-to-cart
+                                vs 27.17% cart-to-purchase.</li>
+                                <li>Aggregate metrics would've hidden this entirely. Only session-level tracking
+                                in PostgreSQL surfaced the exact stage where people dropped off.</li>
+                                <li>Returning visitors convert at nearly 3x new visitors, meaning the fix isn't
+                                just the funnel, it's the first-visit experience.</li>
+                                <li>The real fix is product-page clarity, not a checkout redesign. That reframe
+                                became 3 proposed A/B tests instead of the obvious checkout fix.</li>
+                            </ul>
+                        </div>
+                        <div class="folio-item__detail" hidden>
+                            <div class="folio-item__detail-cat">Funnel &amp; Conversion Analysis</div>
+                            <h3 class="folio-item__detail-title">E-Commerce Funnel Diagnostics</h3>
+                            <p>The instinct going in was that checkout would be the leak — it usually is.
+                            Working from the RetailRocket eCommerce events dataset (views, add-to-cart,
+                            transactions), I built a session-level clickstream mart in PostgreSQL from
+                            scratch: sessionization, timestamp cleaning, and stage-by-stage conversion
+                            tracking across the full funnel.</p>
+                            <p>The data told a different story. View-to-cart converted at just 2.21% — a
+                            97.79% drop — while cart-to-purchase actually held up fine at 27.17%. Aggregate,
+                            top-line metrics would have hidden this entirely; only session-level tracking
+                            surfaced exactly where the funnel actually breaks.</p>
+                            <p>That reframed the fix: not a checkout redesign, but product-page clarity. I
+                            also found returning visitors converting at nearly 3x the rate of new visitors
+                            during peak hours, pointing at the first-visit experience as much as the funnel
+                            itself. The output was 3 proposed A/B tests (PDP clarity, category UX, cart
+                            recovery) and 4 Tableau dashboards, packaged into a stakeholder memo — not just
+                            a chart, a specific, arguable recommendation.</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb-wrap">
+                            <div class="folio-item__thumb">
+                                <a class="folio-item__thumb-link" href="images/portfolio/project-anomaly.svg">
+                                    <img src="images/portfolio/project-anomaly.svg" alt="GMV time series with a flagged anomaly spike">
+                                </a>
+                            </div>
+                            <div class="folio-item__info">
+                                <div class="folio-item__cat">Anomaly Detection · Python</div>
+                                <h4 class="folio-item__title">GMV Anomaly Detection Pipeline</h4>
+                            </div>
+                            <a href="https://github.com/aarya-7/gmv-narrator" title="Project Link" class="folio-item__project-link" target="_blank" rel="noopener">Project Link</a>
+                        </div>
+                        <div class="folio-item__caption">
+                            <ul class="disc">
+                                <li>The spike wasn't random, it was regional. Southeast Brazil drove 72% of the
+                                +558% delta.</li>
+                                <li>A more robust stat caught what standard deviation would've missed. MAD-based
+                                z-scores, validated against 3 stress-test shocks.</li>
+                                <li>Root-cause time dropped from hours to zero. Schema-bound fact packets meant
+                                auditable briefs, no manual querying.</li>
+                                <li>12 events flagged with severity and driver attribution, so leadership acted
+                                on ranked risk, not raw alerts.</li>
+                            </ul>
+                        </div>
+                        <div class="folio-item__detail" hidden>
+                            <div class="folio-item__detail-cat">Anomaly Detection · Python</div>
+                            <h3 class="folio-item__detail-title">GMV Anomaly Detection Pipeline</h3>
+                            <p>Revenue swings are normal in GMV data — the hard part is telling a real
+                            anomaly apart from ordinary volatility fast enough for it to matter. Standard
+                            deviation-based thresholds kept getting fooled by that volatility, throwing false
+                            alarms or missing the real ones.</p>
+                            <p>I switched to MAD-based robust z-scores on detrended residuals, which held up
+                            cleanly against 3 synthetic stress-test shocks where the standard-deviation
+                            approach didn't. The pipeline runs in Python against a PostgreSQL revenue store,
+                            decomposing trend from noise before scoring, then tagging each flagged event with
+                            a severity level and a driver attribution — which region, which segment, how much
+                            of the delta it explains.</p>
+                            <p>The last piece was making the output usable without a follow-up meeting: I
+                            constrained an LLM to only the pre-computed fact packets (no open-ended
+                            querying), so every generated brief is auditable back to a specific number.
+                            Across 18 months, the pipeline surfaced 12 flagged events this way — including a
+                            Black Friday spike of +558% (z=29.79) correctly attributed to Southeast Brazil at
+                            72% of the total delta, with zero manual digging.</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+                <div class="column js-folio-extra">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb-wrap">
+                            <div class="folio-item__thumb">
+                                <a class="folio-item__thumb-link" href="images/portfolio/project-h1b.svg">
+                                    <img src="images/portfolio/project-h1b.svg" alt="ELT pipeline diagram: raw to staging to intermediate to marts">
+                                </a>
+                            </div>
+                            <div class="folio-item__info">
+                                <div class="folio-item__cat">Data Engineering · dbt/Snowflake</div>
+                                <h4 class="folio-item__title">H-1B LCA Disclosure Analytics Pipeline</h4>
+                            </div>
+                            <a href="https://github.com/aarya-7/h1b-lca-analytics-pipeline" title="Project Link" class="folio-item__project-link" target="_blank" rel="noopener">Project Link</a>
+                        </div>
+                        <div class="folio-item__caption">
+                            <ul class="disc">
+                                <li>Built an ELT pipeline from raw DOL Excel/Parquet files into Snowflake, layered
+                                through dbt as RAW → staging → intermediate → marts, so every transformation is
+                                visible in version control, not patched silently in the warehouse.</li>
+                                <li>Reconciled real source inconsistencies explicitly in staging: a hyphen-vs-underscore
+                                column rename between Q1 and Q2–Q4, and nanosecond Unix timestamps cast to real dates.</li>
+                                <li>Normalized wages mixing Hour/Week/Bi-Weekly/Month/Year units into one annualized
+                                figure, flagging implausible values instead of silently guessing or dropping them.</li>
+                                <li>Deduplicated four quarters of FY2025 LCA disclosures down to one row per case,
+                                tracking H-1B sponsorship by employer, industry, and role across the NY/NJ tech market.</li>
+                            </ul>
+                        </div>
+                        <div class="folio-item__detail" hidden>
+                            <div class="folio-item__detail-cat">Data Engineering · dbt/Snowflake</div>
+                            <h3 class="folio-item__detail-title">H-1B LCA Disclosure Analytics Pipeline</h3>
+                            <p>This one started as a data engineering exercise and became a question worth
+                            answering: how is H-1B sponsorship actually distributed across employers,
+                            industries, and roles, especially in the NY/NJ tech market?</p>
+                            <p>The pipeline moves DOL's quarterly LCA disclosure Excel/Parquet files into
+                            Snowflake, then through dbt in explicit layers — RAW (an untouched mirror of the
+                            source), staging (rename/cast only), intermediate (union all 4 quarters, dedupe
+                            to one row per case), and marts (wage-normalized, ready for BI). Every schema
+                            name signals exactly what's been touched, so nothing gets quietly patched in the
+                            warehouse.</p>
+                            <p>The real work was in the edge cases the source data doesn't hand you cleanly:
+                            Q1's raw schema uses a hyphenated column name that Q2–Q4 don't, dates arrive as
+                            nanosecond Unix timestamps instead of real dates, and wages mix
+                            Hour/Week/Bi-Weekly/Month/Year units in the same column. I normalized all of it
+                            to an annualized figure in the marts layer — and where a value was implausible
+                            but plausibly just mislabeled, I flagged it in a separate column instead of
+                            silently correcting or dropping it. The goal throughout: every transformation
+                            decision stays visible and defensible, not buried.</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+                <div class="column js-folio-extra">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb-wrap">
+                            <div class="folio-item__thumb">
+                                <a class="folio-item__thumb-link" href="images/portfolio/project-fraud.svg">
+                                    <img src="images/portfolio/project-fraud.svg" alt="ROC curve comparing three fraud-detection classifiers">
+                                </a>
+                            </div>
+                            <div class="folio-item__info">
+                                <div class="folio-item__cat">Applied ML · Fraud Detection</div>
+                                <h4 class="folio-item__title">Credit Card Fraud Detection</h4>
+                            </div>
+                            <a href="https://github.com/aarya-7/Credit-Card-Fraud-Detection" title="Project Link" class="folio-item__project-link" target="_blank" rel="noopener">Project Link</a>
+                        </div>
+                        <div class="folio-item__caption">
+                            <ul class="disc">
+                                <li>Benchmarked three classifiers — Random Forest, AdaBoost, and XGBoost — on highly
+                                imbalanced transaction data, evaluated by ROC-AUC rather than raw accuracy.</li>
+                                <li>XGBoost led at 0.982 ROC-AUC, outperforming Random Forest (0.902) and AdaBoost
+                                (0.870) at catching fraudulent transactions.</li>
+                                <li>Explored anonymized, PCA-transformed transaction features to find what separates
+                                fraud from legitimate activity without access to raw transaction meaning.</li>
+                                <li>Built interactive Plotly visualizations to make model results and class-imbalance
+                                tradeoffs inspectable, not just a single accuracy number.</li>
+                            </ul>
+                        </div>
+                        <div class="folio-item__detail" hidden>
+                            <div class="folio-item__detail-cat">Applied ML · Fraud Detection</div>
+                            <h3 class="folio-item__detail-title">Credit Card Fraud Detection</h3>
+                            <p>Fraud detection is a textbook imbalanced-classification problem — the
+                            interesting cases are a tiny fraction of the data, which makes accuracy a
+                            useless metric; a model that never flags fraud is still "99.8% accurate."</p>
+                            <p>Working from the anonymized, PCA-transformed Kaggle credit card transaction
+                            dataset, I benchmarked three classifiers — Random Forest, AdaBoost, and XGBoost —
+                            scored by ROC-AUC instead. XGBoost led clearly at 0.982, ahead of Random Forest
+                            (0.902) and AdaBoost (0.870).</p>
+                            <p>Because the features are PCA components rather than raw transaction fields,
+                            there's no way to reason about them from domain knowledge alone — the
+                            exploratory analysis had to lean entirely on the data's statistical structure to
+                            find what actually separated fraud from legitimate activity. I built interactive
+                            Plotly visualizations around the results so the class-imbalance tradeoffs and
+                            model comparisons were something a reader could actually inspect, not just a
+                            single accuracy number to take on faith.</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+            </div> <!-- folio-list -->
+
+            <div class="row folio-list__more-wrap">
+                <div class="column lg-12">
+                    <button type="button" class="btn js-folio-show-more">Show More</button>
+                </div>
+            </div>
+
+        </section> <!-- end s-works -->
+
+
+        <!-- ## experience
+        ================================================== -->
+        <section id="experience" class="s-experience target-section">
+
+            <div class="row section-header section-header--dark has-bottom-sep" data-animate-block>
+                <div class="column lg-12" data-animate-el>
+                    <h3 class="text-pretitle">Background</h3>
+                    <h1 class="text-display-title">
+                        Experience and Education
+                    </h1>
+                </div>
+            </div> <!-- end section-header -->
+
+            <div class="row timeline-list block-lg-whole" data-animate-block>
+
+                <div class="column" data-animate-el>
+                    <h3 class="h4 timeline-list__heading">Experience</h3>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item__meta">Aug 2025 – May 2026</div>
+                        <h4 class="timeline-item__title">Graduate Peer Leader</h4>
+                        <div class="timeline-item__org">Stevens Institute of Technology</div>
+                        <ul class="disc">
+                            <li>Sat down individually with incoming graduate students who were navigating a
+                            new program, sometimes a new country, and helped turn a list of worries into an
+                            actual plan for coursework, timelines, and where to go for help.</li>
+                            <li>Built repeatable structure around something that's usually left informal,
+                            goal-setting conversations that actually produced next steps, not just
+                            reassurance.</li>
+                            <li>The instinct underneath it is the same one behind the data work: someone
+                            hands you something unclear and a little overwhelming, and the job is to make
+                            it concrete enough to move on.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item__meta">2023</div>
+                        <h4 class="timeline-item__title">Data Science Intern</h4>
+                        <div class="timeline-item__org">Exposys Data Labs, Maharashtra, India</div>
+                        <ul class="disc">
+                            <li>Took a clinical dataset of 768 patients across 8 variables and worked through
+                            the unglamorous part first, missing values, inconsistent entries, features that
+                            needed engineering before any modeling could start.</li>
+                            <li>Ran a contribution analysis to isolate which variables actually mattered, and
+                            found glucose, BMI, and age carrying the real predictive weight for diabetes
+                            risk, not the ones that looked interesting on the surface.</li>
+                            <li>Rebuilt those findings as visualizations meant for people without a stats
+                            background, since a result nobody can read is a result that doesn't get used.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column" data-animate-el>
+                    <h3 class="h4 timeline-list__heading">Education</h3>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item__meta">Aug 2024 – May 2026</div>
+                        <h4 class="timeline-item__title">M.S. in Data Science</h4>
+                        <div class="timeline-item__org">Stevens Institute of Technology, Hoboken, NJ · GPA 3.56/4</div>
+                        <p>Relevant coursework: Web Mining, Marketing Analytics, Statistical Methods,
+                        Applied Machine Learning.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item__meta">Aug 2020 – May 2024</div>
+                        <h4 class="timeline-item__title">B.E. in Artificial Intelligence &amp; Data Science</h4>
+                        <div class="timeline-item__org">Savitribai Phule Pune University, Pune, India · GPA 8.3/10</div>
+                    </div>
+                </div>
+
+            </div> <!-- end timeline-list -->
+
+        </section> <!-- end s-experience -->
+
+
+        <!-- ## contact
+        ================================================== -->
+        <section id="contact" class="s-contact target-section">
+
+            <div class="row section-header section-header--dark" data-animate-block>
+                <div class="column lg-12" data-animate-el>
+                    <h3 class="text-pretitle">Get In Touch</h3>
+                    <h1 class="text-display-title">
+                        Have a data problem worth digging into? Let's talk.
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row row-x-center text-center s-contact__content">
+                <div class="column lg-12">
+                    <p class="lead">
+                    I'm currently looking for opportunities in data analytics, business intelligence,
+                    and product analytics. Reach out if you'd like to see the work behind these numbers,
+                    or talk about a role.
+                    </p>
+                    <div class="btn-wrap">
+                        <a href="mailto:aaryabhivsanee@gmail.com" class="btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,6v0.511 l-8,6.223L4,6.512V6H20z M4,18V9.044l7.386,5.745C11.566,14.93,11.783,15,12,15s0.434-0.07,0.614-0.211L20,9.044L20.002,18H4z"></path></svg>
+                            Write An Email
+                        </a>
+                        <a href="Resume_AaryaBhivsanee.pdf" class="btn" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M12 16l5-6h-3V3h-4v7H7l5 6zm-9 2h18v2H3v-2z"></path></svg>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="s-footer">
+
+                <div class="row s-footer__top">
+                    <div class="column lg-6 md-6 stack-on-700 s-footer__block contact-address">
+                        <h4 class="h6">Location</h4>
+
+                        <p>
+                        New Jersey, <br>
+                        United States
+                        </p>
+                    </div>
+
+                    <div class="column lg-6 md-6 stack-on-700 s-footer__block contact-number">
+                        <h4 class="h6">Contact Me</h4>
+
+                        <ul class="contact-list">
+                            <li>
+                                <a href="mailto:aaryabhivsanee@gmail.com" class="contact-list__email">
+                                    <svg class="contact-list__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,6v0.511 l-8,6.223L4,6.512V6H20z M4,18V9.044l7.386,5.745C11.566,14.93,11.783,15,12,15s0.434-0.07,0.614-0.211L20,9.044L20.002,18H4z"></path></svg>
+                                    aaryabhivsanee@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end s-footer__top -->
+
+                <div class="row s-footer__bottom">
+                    <div class="column ss-copyright">
+                        <span>© Copyright Aarya Bhivsanee 2026</span>
+                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                    </div>
+
+                    <div class="ss-go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top">
+                            <span class="ss-go-top__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:rotate(90deg);-ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1)"><path d="M6 4H18V6H6zM11 14L11 20 13 20 13 14 18 14 12 8 6 14z"></path></svg>
+                            </span>
+                            <span class="ss-go-top__text">Back to Top</span>
+                        </a>
+                    </div>
+                </div> <!-- end s-footer__top -->
+
+            </footer>
+
+        </section> <!-- end s-contact -->
+
+    </div> <!-- end -s-pagewrap -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="project-card">
-          <img src="images/proj2.jpg" alt="GMV Anomaly Detection" class="project-thumb" />
-          <div class="project-info">
-            <h3><a href="https://github.com/aarya-7/gmv-narrator" target="_blank" rel="noopener">GMV Anomaly Detection &amp; Attribution <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
-            <p>Built a Python and PostgreSQL pipeline that flags, decomposes, and narrates GMV anomalies automatically, surfacing 12 revenue events across 18 months. Used MAD-based z-scores for robust detection and constrained an LLM to generate auditable What/Why/Action briefs with no manual query.</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img src="images/proj3.jpg" alt="SaaS Retention & Churn Analytics" class="project-thumb" />
-          <div class="project-info">
-            <h3><a href="https://github.com/aarya-7/Saas-retention-churn-early-warning" target="_blank" rel="noopener">SaaS Retention &amp; Churn Analytics <i class="fas fa-arrow-up-right project-arrow"></i></a></h3>
-            <p>Quantified $9.9M paid MRR against an 8.02% churn rate across 500 accounts, isolating the 21 to 50 seat segment ($165K churned MRR) as the concentration point. Risk-band scoring validated against actual outcomes: HIGH-risk churned at 50% vs. 15% for MEDIUM accounts.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section-title">
-        <span class="title-solid">MY TECH</span>
-        <span class="title-ghost">STACK</span>
-      </div>
-      <div class="skills-grid">
-
-        <div class="skill-item">
-          <div class="skill-icon" style="background:#1a2e40;">
-            <i class="fas fa-database" style="color:#5b9bd5;"></i>
-          </div>
-          <div>
-            <h4>PostgreSQL &amp; SQL</h4>
-            <p>Advanced analytics SQL including CTEs, window functions, sessionization, and aggregations across large-scale datasets.</p>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-icon" style="background:#2d2a18;">
-            <i class="fab fa-python" style="color:#f7cc41;"></i>
-          </div>
-          <div>
-            <h4>Python</h4>
-            <p>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SciPy from EDA through to end-to-end ML pipelines.</p>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-icon" style="background:#1a2d3a;">
-            <i class="fas fa-chart-line" style="color:#1fa8e0;"></i>
-          </div>
-          <div>
-            <h4>Tableau &amp; Power BI</h4>
-            <p>Executive dashboards covering funnel health, anomaly overlays, cohort retention, and KPI reporting.</p>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-icon" style="background:#1e2a18;">
-            <i class="fas fa-brain" style="color:#86efac;"></i>
-          </div>
-          <div>
-            <h4>Machine Learning</h4>
-            <p>Classification, risk scoring, and explainable early warning models using usage and behavioral signals.</p>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-icon" style="background:#281e16;">
-            <i class="fas fa-cubes" style="color:#f97316;"></i>
-          </div>
-          <div>
-            <h4>dbt &amp; Snowflake</h4>
-            <p>Data transformation and warehouse-layer analytics for scalable, modular, and testable reporting pipelines.</p>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-icon" style="background:#1e1c2a;">
-            <i class="fas fa-code-branch" style="color:#a78bfa;"></i>
-          </div>
-          <div>
-            <h4>Git &amp; Jupyter</h4>
-            <p>Version-controlled analytics workflows with reproducible notebooks and structured project documentation.</p>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-icon" style="background:#1a2e1a;">
-            <i class="fas fa-file-excel" style="color:#21a366;"></i>
-          </div>
-          <div>
-            <h4>MS Excel</h4>
-            <p>Pivot tables, advanced formulas, Power Query, and dashboard reporting for business analysis and stakeholder delivery.</p>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-icon" style="background:#1e1e1e;">
-            <i class="fas fa-robot" style="color:#e5e5e5;"></i>
-          </div>
-          <div>
-            <h4>AI Tools</h4>
-            <p>Claude Code, ChatGPT, and n8n for workflow automation, code acceleration, and building LLM-assisted analytics pipelines.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <div class="section-title">
-        <span class="title-solid">WORK</span>
-        <span class="title-ghost">EXPERIENCE</span>
-      </div>
-      <div class="exp-list">
-
-        <div class="exp-card">
-          <div class="exp-header">
-            <h3>Graduate Peer Leader</h3>
-            <span class="exp-date">Aug 2025 &ndash; May 2026</span>
-          </div>
-          <p class="exp-company">Stevens Institute of Technology &middot; Hoboken, NJ</p>
-          <ul class="exp-bullets">
-            <li>Mentored incoming graduate students through academic and professional transitions, providing structured guidance on goal setting, coursework selection, and campus resources throughout the semester.</li>
-          </ul>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-header">
-            <h3>Data Science Intern</h3>
-            <span class="exp-date">2023</span>
-          </div>
-          <p class="exp-company">Exposys Data Labs &middot; Maharashtra, India</p>
-          <ul class="exp-bullets">
-            <li>Cleaned and standardized a 768-patient healthcare dataset covering 8 clinical variables including glucose, BMI, and insulin levels, handling missing values and engineering derived features to support downstream risk analysis.</li>
-            <li>Identified glucose, BMI, and age as the strongest predictors of diabetes risk and delivered stakeholder-ready visualizations summarizing key risk factor patterns and segment-level breakdowns.</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Findings -->
-    <section id="findings" class="section">
-      <div class="section-title">
-        <span class="title-solid">CURIOUS</span>
-        <span class="title-ghost">FINDINGS</span>
-      </div>
-      <div class="findings-list">
-
-        <div class="finding-card">
-          <div class="finding-meta">
-            <span>Experimentation</span>
-            <span>&middot;</span>
-            <span>A/B Testing</span>
-            <span>&middot;</span>
-            <span>5 min read</span>
-          </div>
-          <h3>Controlled Experiments Are an Operating System, Not a Feature</h3>
-          <p>Kohavi et al.'s paper on controlled experiments is a case for why you trust the experiment over the expert, every time. A coupon code field wiped out roughly 90% of checkout revenue, a more usable 5-star widget cut feedback rates by 90%, and Amazon's cart recommendations nearly never shipped because a marketing leader blocked them without data. Running experiments is not a feature you bolt onto product development, it is the operating system underneath every decision worth making.</p>
-          <div class="finding-links">
-            <a href="https://lnkd.in/eVEqHTFm" target="_blank" rel="noopener">Paper</a>
-            <a href="https://www.linkedin.com/posts/aarya-bhivsanee_abtesting-experimentation-dataanalysis-activity-7426618380738072576-9dBU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADmcYrsBPuDxpLlQKKLwdv2H2pWJeGW27RI" target="_blank" rel="noopener">Full post on LinkedIn</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
+    </div> <!-- end photoSwipe background -->
 
 
-  </main>
-
-  <!-- ─── Footer ────────────────────────────────────────────────── -->
-  <footer id="footer">
-    <p>&copy; 2026 Aarya Bhivsanee. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="mailto:aaryabhivsanee@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/aarya-bhivsanee" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/aarya-7" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </footer>
-
-  <!-- ─── Scripts ───────────────────────────────────────────────── -->
-  <script>
-    // Hide nav on scroll, show only when back at top
-    const nav = document.getElementById('topnav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) {
-        nav.classList.add('hidden');
-      } else {
-        nav.classList.remove('hidden');
-      }
-    }, { passive: true });
-
-    // Highlight active nav item based on scroll position
-    const sections = document.querySelectorAll('.section');
-    const navItems = document.querySelectorAll('.nav-item');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          navItems.forEach(item => {
-            item.classList.toggle('active', item.getAttribute('href') === '#' + id);
-          });
-        }
-      });
-    }, { rootMargin: '-40% 0px -40% 0px' });
-
-    sections.forEach(s => observer.observe(s));
-
-    // Smooth scroll on nav click
-    navItems.forEach(item => {
-      item.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(item.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

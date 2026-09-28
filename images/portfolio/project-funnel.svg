@@ -1,0 +1,13 @@
+<svg width="1050" height="700" viewBox="0 0 1050 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1050" height="700" fill="#101112"/>
+  <text x="70" y="90" font-family="Manrope, sans-serif" font-size="28" fill="#5b5b5c" letter-spacing="2">SESSION FUNNEL</text>
+
+  <!-- funnel stages -->
+  <polygon points="150,150 900,150 750,300 300,300" fill="#B4502A"/>
+  <polygon points="300,320 750,320 630,470 420,470" fill="#E8A33D"/>
+  <polygon points="420,490 630,490 570,620 480,620" fill="#e0cd8f"/>
+
+  <text x="920" y="235" font-family="Inter, sans-serif" font-size="22" fill="#e8e8e8">View</text>
+  <text x="920" y="405" font-family="Inter, sans-serif" font-size="22" fill="#e8e8e8">Cart</text>
+  <text x="920" y="565" font-family="Inter, sans-serif" font-size="22" fill="#e8e8e8">Purchase</text>
+</svg>
