@@ -4868,11 +4868,6 @@ img.u-pull-left {
     margin-bottom : 0;
 }
 
-.about-section__placeholder {
-    font-style : italic;
-    color      : var(--color-text-light);
-}
-
 .s-about-footer-wrap {
     background-color : var(--color-gray-14);
     padding-top       : var(--vspace-5);
