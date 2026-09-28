@@ -4799,10 +4799,6 @@ img.u-pull-left {
     max-width : none;
 }
 
-.s-about-block--outside .about-section p {
-    text-align : right;
-}
-
 /* flexbox (not float) so the image and the wrapped text can never mismatch
  * in height and break out of the row, and so both can be vertically centered
  * against each other regardless of which one is taller */
