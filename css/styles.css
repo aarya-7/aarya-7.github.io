@@ -4711,10 +4711,8 @@ img.u-pull-left {
     font-weight : 600;
 }
 
-/* both about-page photos share one frame: same border, radius and 3:2 ratio
- * (the source images are 1.59 and 1.51, so cover trims only a sliver) */
-.about-intro-photo,
-.outside-work-photo {
+/* hero photo frame: 3:2 ratio (the source is 1.59, so cover trims only a sliver) */
+.about-intro-photo {
     width         : 100%;
     aspect-ratio  : 3 / 2;
     border        : 1px solid rgba(255, 255, 255, .12);
@@ -4727,8 +4725,7 @@ img.u-pull-left {
 }
 
 /* base img rule adds a bottom margin that left an empty strip inside the frame */
-.about-intro-photo img,
-.outside-work-photo img {
+.about-intro-photo img {
     display       : block;
     width         : 100%;
     height        : 100%;
@@ -4782,10 +4779,6 @@ img.u-pull-left {
  * block would (doubled selector beats the small-screen .s-about-block rule) */
 .s-about-block.s-about-block--closing {
     padding-top : 0;
-}
-
-.outside-work-photo {
-    margin-bottom : var(--vspace-1_5);
 }
 
 .about-section__eyebrow {
