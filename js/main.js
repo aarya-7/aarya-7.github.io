@@ -235,6 +235,7 @@
         const blocks = document.querySelectorAll('[data-animate-block]');
 
         window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
 
         function animateOnScroll() {
 
@@ -244,9 +245,9 @@
 
                 const viewportHeight = window.innerHeight;
                 const triggerTop = (current.offsetTop + (viewportHeight * .2)) - viewportHeight;
-                const blockHeight = current.offsetHeight;
-                const blockSpace = triggerTop + blockHeight;
-                const inView = scrollY > triggerTop && scrollY <= blockSpace;
+                // anything at or above the trigger line counts, so blocks skipped by
+                // a fast jump (End key, anchor, restored scroll) still appear
+                const inView = scrollY > triggerTop;
                 const isAnimated = current.classList.contains('ss-animated');
 
                 if (inView && (!isAnimated)) {
@@ -406,8 +407,8 @@
         const SCALE_STEP  = 0.25;
 
         const MAX_OPACITY   = 1;
-        const MIN_OPACITY   = 0.35;
-        const OPACITY_STEP  = 0.28;
+        const MIN_OPACITY   = 0.6;
+        const OPACITY_STEP  = 0.2;
 
         let ticking = true;
 
@@ -551,4 +552,4 @@
 
     })();
 
-})(document.documentElement);
+})(document.documentElement);

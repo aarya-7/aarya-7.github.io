@@ -2669,8 +2669,14 @@ td:last-child {
     word-wrap : normal !important;
 }
 
-[data-animate-el] {
+.js [data-animate-el] {
     opacity : 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js [data-animate-el] {
+        opacity : 1 !important;
+    }
 }
 
 .basicLightbox iframe {
@@ -4584,6 +4590,38 @@ img.u-pull-left {
     }
 }
 
+/* the rotated "back to top" rises into the contact row at 1200px and below
+ * (it touched the email on phones too), so sit it on the copyright line as
+ * a plain icon instead */
+@media screen and (max-width: 1200px) {
+    .ss-go-top {
+        transform : none;
+        bottom    : 0;
+    }
+
+    .ss-go-top::after {
+        display : none;
+    }
+
+    .ss-go-top__icon {
+        margin-right : 0;
+    }
+
+    /* the arrow svg carries an inline rotate(90deg) meant for the rotated
+     * container, so undo it now that the container isn't rotated */
+    .ss-go-top svg {
+        transform : none !important;
+    }
+
+    .ss-go-top__text {
+        position : absolute;
+        width    : 1px;
+        height   : 1px;
+        overflow : hidden;
+        clip     : rect(0 0 0 0);
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .s-footer h4 {
         margin-bottom : var(--vspace-0_625);
@@ -4640,56 +4678,62 @@ img.u-pull-left {
  *
  *
  * ------------------------------------------------------------------- */
-.s-about-intro {
-    padding-top    : calc(var(--header-height) + var(--vspace-3));
-    padding-bottom : var(--vspace-2);
+/* the hero reuses the homepage banner + overlapping card (.s-intro*), so only
+ * the spacing around it and the content inside the card need styling here */
+.s-about-hero {
+    padding-bottom : 0;
 }
 
-.s-about-intro::after {
-    content : "";
-    display : block;
-    clear   : both;
+.s-about-hero .s-intro__about {
+    margin-bottom : 0;
 }
 
-.about-intro-photo {
-    float         : right;
-    width         : 65%;
-    max-width     : 650px;
-    margin        : 0 0 var(--vspace-1_5) var(--vspace-2);
+/* the tagline is the page's h1 here (a <p> on the homepage), so give it the
+ * homepage tagline's grey instead of the global white heading colour, and
+ * balance the lines so a single word never sits alone on the second line */
+.s-about-hero h1.s-intro__text {
+    color     : var(--color-text);
+    text-wrap : balance;
+}
+
+/* inside the card the text fills the same width as the photo above it */
+.s-about-hero .s-intro__about p,
+.s-about-plain p {
+    max-width : none;
+}
+
+.s-about-hero .s-intro__about p:last-child {
+    margin-bottom : 0;
+}
+
+.s-about-hero .s-intro__about p strong {
+    color       : var(--color-white);
+    font-weight : 600;
+}
+
+/* both about-page photos share one frame: same border, radius and 3:2 ratio
+ * (the source images are 1.59 and 1.51, so cover trims only a sliver) */
+.about-intro-photo,
+.outside-work-photo {
+    width         : 100%;
+    aspect-ratio  : 3 / 2;
     border        : 1px solid rgba(255, 255, 255, .12);
     border-radius : var(--border-radius);
     overflow      : hidden;
 }
 
-.about-intro-photo img {
-    display : block;
-    width   : 100%;
-    height  : auto;
+.about-intro-photo {
+    margin : 0 0 var(--vspace-1_5);
 }
 
-.s-about-intro p {
-    color         : var(--color-text-dark);
-    font-size     : calc(var(--text-size) * 1.1111);
-    line-height   : var(--vspace-1_25);
-    margin-bottom : var(--vspace-1);
-}
-
-.s-about-intro p:last-child {
+/* base img rule adds a bottom margin that left an empty strip inside the frame */
+.about-intro-photo img,
+.outside-work-photo img {
+    display       : block;
+    width         : 100%;
+    height        : 100%;
+    object-fit    : cover;
     margin-bottom : 0;
-}
-
-.s-about-intro p strong {
-    color       : var(--color-white);
-    font-weight : 700;
-}
-
-@media screen and (max-width: 700px) {
-    .about-intro-photo {
-        float  : none;
-        width  : 100%;
-        max-width : none;
-        margin : var(--vspace-1) 0 var(--vspace-1_5) 0;
-    }
 }
 
 .s-about-block {
@@ -4697,61 +4741,51 @@ img.u-pull-left {
     padding-bottom : var(--vspace-2);
 }
 
+/* lower sections use the hero card's own width and side padding, minus its
+ * background and vertical padding, so every text edge on the page lines up
+ * with the text inside the hero card at every screen size */
+.s-intro__about.s-about-plain {
+    background-color : transparent;
+    margin-top       : 0;
+    margin-bottom    : 0;
+    padding-top      : 0;
+    padding-bottom   : 0;
+    color            : var(--color-text-dark);
+}
+
+.s-about-plain::before {
+    display : none;
+}
+
+.s-about-plain p {
+    margin-bottom : 0;
+}
+
+.s-about-plain ul.disc {
+    margin  : 0;
+    padding : 0;
+}
+
+.s-about-plain ul.disc li {
+    margin-bottom : var(--vspace-0_5);
+}
+
+.s-about-plain ul.disc li:last-child {
+    margin-bottom : 0;
+}
+
 .s-about-block--closing {
     text-align : center;
 }
 
-/* this section's column shares the intro section's un-capped width so
- * its photo treatment resolves to a comparably generous pixel size, and
- * the text column gets a similarly wide line length as the section above */
-.s-about-block--outside .about-section {
-    max-width : none;
-}
-
-/* flexbox (not float) so the image and the wrapped text can never mismatch
- * in height and break out of the row, and so both can be vertically centered
- * against each other regardless of which one is taller */
-.outside-work-row {
-    display     : flex;
-    align-items : center;
-    gap         : var(--vspace-2);
+/* a one-line sign-off, so it sits closer to the section above than a full
+ * block would (doubled selector beats the small-screen .s-about-block rule) */
+.s-about-block.s-about-block--closing {
+    padding-top : 0;
 }
 
 .outside-work-photo {
-    flex          : 0 0 63.5375%;
-    max-width     : 635.375px;
-    border        : 1px solid rgba(255, 255, 255, .12);
-    border-radius : var(--border-radius);
-    overflow      : hidden;
-}
-
-.outside-work-photo img {
-    display : block;
-    width   : 100%;
-    height  : auto;
-}
-
-.outside-work-row p {
-    flex : 1 1 auto;
-}
-
-@media screen and (max-width: 700px) {
-    .outside-work-row {
-        flex-direction : column;
-        align-items    : stretch;
-        gap            : var(--vspace-1_5);
-    }
-
-    .outside-work-photo {
-        flex      : 0 0 auto;
-        max-width : none;
-    }
-}
-
-.about-section {
-    max-width : 720px;
-    margin    : 0;
-    color     : var(--color-text-dark);
+    margin-bottom : var(--vspace-1_5);
 }
 
 .about-section__eyebrow {
@@ -4765,35 +4799,26 @@ img.u-pull-left {
     margin-bottom  : var(--vspace-0_75);
 }
 
-.about-section p {
-    font-size   : calc(var(--text-size) * 1.1111);
-    line-height : var(--vspace-1_25);
-    margin-bottom : 0;
-}
-
-.about-section ul.disc {
-    margin      : 0;
-    padding     : 0;
-    font-size   : calc(var(--text-size) * 1.1111);
-    line-height : var(--vspace-1_25);
-}
-
-.about-section ul.disc li {
-    margin-bottom : var(--vspace-0_5);
-}
-
-.about-section ul.disc li:last-child {
-    margin-bottom : 0;
-}
-
 .s-about-footer-wrap {
-    background-color : var(--color-gray-14);
-    padding-top       : var(--vspace-5);
+    border-top  : 1px solid rgba(255, 255, 255, .08);
+    padding-top : var(--vspace-3);
+}
+
+/* the footer's own top margin (meant for the homepage contact section)
+ * stacked on top of the wrapper padding */
+.s-about-footer-wrap .s-footer {
+    margin-top : 0;
 }
 
 /* -------------------------------------------------------------------
  * ## quotes carousel (continuous marquee)
  * ------------------------------------------------------------------- */
+/* flex items default to min-width:auto, which let this column stretch past
+ * the page and pushed the carousel off-centre */
+.s-about-block--quotes .column {
+    min-width : 0;
+}
+
 .quotes-carousel {
     --quote-card-w  : 368px;
     --quote-card-h  : 253px;
@@ -4806,8 +4831,9 @@ img.u-pull-left {
 .quotes-carousel__viewport {
     display     : flex;
     align-items : center;
-    overflow    : hidden;
-    height      : calc(var(--quote-card-h) * 1.5);
+    overflow-x  : clip;
+    overflow-y  : visible;
+    height      : calc(var(--quote-card-h) * 1.25);
 }
 
 .quotes-carousel__track {
@@ -4817,13 +4843,15 @@ img.u-pull-left {
     width      : max-content;
     list-style : none;
     margin     : 0;
-    padding    : 0;
+    /* trailing gap makes the track exactly two equal halves, so the -50%
+     * loop lands precisely on the duplicate set with no hitch */
+    padding    : 0 var(--vspace-0_375) 0 0;
     animation  : quotes-marquee 25s linear infinite;
 }
 
 @keyframes quotes-marquee {
-    from { transform : translateX(-50%); }
-    to   { transform : translateX(0%); }
+    from { transform : translateX(0%); }
+    to   { transform : translateX(-50%); }
 }
 
 .quote-card {
@@ -4940,10 +4968,6 @@ img.u-pull-left {
 }
 
 @media screen and (max-width: 500px) {
-    .s-about-intro {
-        padding-top : calc(var(--header-height) + var(--vspace-2));
-    }
-
     .s-about-block {
         padding-top    : var(--vspace-1_5);
         padding-bottom : var(--vspace-1_5);

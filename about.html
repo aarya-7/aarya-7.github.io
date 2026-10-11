@@ -126,23 +126,36 @@
 
         <main>
 
-        <!-- # photo + opening / why
+        <!-- # hero: same banner + overlapping card as the homepage
         ================================================== -->
-        <section class="s-about-intro">
+        <section class="s-intro s-about-hero">
+
             <div class="row">
                 <div class="column">
-                    <h1 class="about-section__eyebrow">It's Never Really About The Data</h1>
+                    <div class="s-intro__top-block">
+                        <span class="s-intro__bg"></span>
 
+                        <h1 class="s-intro__text">It's never really about the <b>data</b>.</h1>
+
+                        <a href="#outside-work" class="s-intro__scroll-down smoothscroll">
+                            <span>Scroll Down</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:rotate(180deg);-ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"><path d="M21 11L6.414 11 11.707 5.707 10.293 4.293 2.586 12 10.293 19.707 11.707 18.293 6.414 13 21 13z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-x-center s-intro__about-wrap">
+                <div class="column s-intro__about">
                     <div class="about-intro-photo">
                         <img src="images/about-photo.jpg" alt="Aarya Bhivsanee">
                     </div>
 
                     <p>What actually gets me isn't the data itself, it's <strong>human behavior</strong>. I've always liked
-                    watching <strong>why people do what they do</strong>, the cues that flip someone from a yes to a no,
+                    watching why people do what they do, the cues that flip someone from a yes to a no,
                     patterns behind a decision they probably didn't even notice they were making.
-                    <strong>Psychology's</strong> part of that too, it always felt like the same question, just asked from a
-                    different perspective. Data's just where I get to chase that properly, with <strong>real
-                    evidence</strong> instead of a guess.</p>
+                    Psychology's part of that too, it always felt like the same question, just asked from a
+                    different perspective. Data's just where I get to chase that properly, with real evidence instead of a guess.</p>
 
                     <p>I do this outside of work too. I'll catch myself noticing how someone lives, the
                     habits they've built without thinking about it, the small choices that add up into
@@ -157,17 +170,18 @@
                     not just raise a flag.</p>
                 </div>
             </div>
+
         </section>
 
 
         <!-- # outside of work
         ================================================== -->
-        <section class="s-about-block s-about-block--outside">
-            <div class="row">
-                <div class="column about-section">
-                    <h2 class="about-section__eyebrow">Outside Of Work</h2>
+        <section id="outside-work" class="s-about-block s-about-block--outside">
+            <div class="row row-x-center" data-animate-block>
+                <div class="column s-intro__about s-about-plain">
+                    <h2 class="about-section__eyebrow" data-animate-el>Outside Of Work</h2>
 
-                    <div class="outside-work-row">
+                    <div class="outside-work-row" data-animate-el>
                         <div class="outside-work-photo">
                             <img src="images/outside-work.jpg" alt="Aarya Bhivsanee outside of work">
                         </div>
@@ -190,15 +204,15 @@
         <!-- # quotes i live by
         ================================================== -->
         <section class="s-about-block s-about-block--quotes">
-            <div class="row">
-                <div class="column about-section">
-                    <h2 class="about-section__eyebrow">Quotes I Live By</h2>
+            <div class="row row-x-center" data-animate-block>
+                <div class="column s-intro__about s-about-plain">
+                    <h2 class="about-section__eyebrow" data-animate-el>Quotes I Live By</h2>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" data-animate-block>
                 <div class="column">
-                    <div class="quotes-carousel">
+                    <div class="quotes-carousel" data-animate-el>
                         <div class="quotes-carousel__viewport">
                             <ul class="quotes-carousel__track">
                                 <li class="quote-card">
@@ -284,10 +298,10 @@
         <!-- # what i'm reading
         ================================================== -->
         <section class="s-about-block">
-            <div class="row">
-                <div class="column about-section">
-                    <h2 class="about-section__eyebrow">What I'm Reading</h2>
-                    <ul class="disc">
+            <div class="row row-x-center" data-animate-block>
+                <div class="column s-intro__about s-about-plain">
+                    <h2 class="about-section__eyebrow" data-animate-el>What I'm Reading</h2>
+                    <ul class="disc" data-animate-el>
                         <li>Lean Analytics</li>
                         <li>Deep Work</li>
                     </ul>
@@ -299,9 +313,9 @@
         <!-- # closing line
         ================================================== -->
         <section class="s-about-block s-about-block--closing">
-            <div class="row">
-                <div class="column about-section">
-                    <p>That's most of it. If any of this overlaps with something you're working on, I'd
+            <div class="row row-x-center" data-animate-block>
+                <div class="column s-intro__about s-about-plain">
+                    <p data-animate-el>That's most of it. If any of this overlaps with something you're working on, I'd
                     like to hear about it.</p>
                 </div>
             </div>
