@@ -3426,6 +3426,7 @@ img.u-pull-left {
 
 .s-intro__text {
     --rotator-scale : 1;
+    color          : var(--color-text-dark);
     font-family    : var(--font-2);
     font-weight    : 500;
     font-size      : calc(var(--text-huge) * var(--text-huge-multiplier) * 0.85 * var(--rotator-scale));
@@ -4713,11 +4714,9 @@ img.u-pull-left {
     margin-bottom : 0;
 }
 
-/* the tagline is the page's h1 here (a <p> on the homepage), so give it the
- * homepage tagline's grey instead of the global white heading colour, and
- * balance the lines so a single word never sits alone on the second line */
+/* balance the tagline's lines so a single word never sits alone on the
+ * second line */
 .s-about-hero h1.s-intro__text {
-    color     : var(--color-text);
     text-wrap : balance;
 }
 
