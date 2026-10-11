@@ -305,29 +305,43 @@
 
         folioItems.forEach(function(folioItem) {
 
-            let thumbLink = folioItem.querySelector('.folio-item__thumb-link');
-            let detail = folioItem.querySelector('.folio-item__detail');
+            const thumbLink = folioItem.querySelector('.folio-item__thumb-link');
+            const img = folioItem.querySelector('.folio-item__thumb img');
+            const cat = folioItem.querySelector('.folio-item__cat');
+            const title = folioItem.querySelector('.folio-item__title');
+            const bullets = folioItem.querySelector('.folio-item__caption ul');
+            const projectLink = folioItem.querySelector('.folio-item__project-link');
 
-            if (!(thumbLink && detail)) return;
+            if (!(thumbLink && img && title && bullets)) return;
 
-            thumbLink.addEventListener('click', function(event) {
+            function openModal(event) {
 
                 event.preventDefault();
 
-                let instance = basicLightbox.create(
-                    '<div class="project-detail-modal">' + detail.innerHTML + '</div>',
-                    {
-                        onShow: function() {
-                            document.body.classList.add('modal-open');
-                        },
-                        onClose: function() {
-                            document.body.classList.remove('modal-open');
-                        }
-                    }
-                );
-                instance.show();
+                const html =
+                    '<div class="project-detail-modal">' +
+                        '<div class="project-detail-modal__media"><img src="' + img.getAttribute('src') + '" alt="' + img.getAttribute('alt') + '"></div>' +
+                        '<div class="project-detail-modal__body">' +
+                            '<div class="project-detail-modal__cat">' + (cat ? cat.innerHTML : '') + '</div>' +
+                            '<h3 class="project-detail-modal__title">' + title.innerHTML + '</h3>' +
+                            '<ul class="disc">' + bullets.innerHTML + '</ul>' +
+                            (projectLink ? '<a class="project-detail-modal__link" href="' + projectLink.getAttribute('href') + '" target="_blank" rel="noopener">View Project</a>' : '') +
+                        '</div>' +
+                    '</div>';
 
-            });
+                basicLightbox.create(html, {
+                    onShow: function() {
+                        document.body.classList.add('modal-open');
+                    },
+                    onClose: function() {
+                        document.body.classList.remove('modal-open');
+                    }
+                }).show();
+
+            }
+
+            // the whole card opens the modal; the thumb link keeps it keyboard-reachable
+            folioItem.addEventListener('click', openModal);
 
         });
 
@@ -537,4 +551,4 @@
 
     })();
 
-})(document.documentElement);
+})(document.documentElement);
