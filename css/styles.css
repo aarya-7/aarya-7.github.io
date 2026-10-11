@@ -4477,9 +4477,34 @@ img.u-pull-left {
     padding-left : 0;
 }
 
+.contact-list li + li {
+    margin-top : var(--vspace-0_75);
+}
+
+/* small tag above each address saying what it's for */
+.contact-list__label {
+    display        : block;
+    font-family    : var(--font-2);
+    font-size      : var(--text-xs);
+    font-weight    : 600;
+    letter-spacing : .2em;
+    line-height    : 1.4;
+    text-transform : uppercase;
+    color          : var(--color-1);
+    margin-bottom  : .2rem;
+}
+
 .contact-list__email {
     display     : inline-flex;
     align-items : center;
+}
+
+/* the longer address is wider than a phone's content area at the footer's
+ * large type size, so let it scale down with the screen width */
+@media screen and (max-width: 600px) {
+    .contact-list__email {
+        font-size : min(var(--text-lg), 5.2vw);
+    }
 }
 
 .contact-list__icon {
@@ -4771,6 +4796,18 @@ img.u-pull-left {
     margin-bottom : 0;
 }
 
+/* reading list: title on one line, author muted beneath it */
+.book-title,
+.book-author {
+    display : block;
+}
+
+.book-author {
+    font-size   : var(--text-sm);
+    line-height : 1.4;
+    color       : var(--color-text-light);
+}
+
 .s-about-block--closing {
     text-align : center;
 }
@@ -4883,7 +4920,7 @@ img.u-pull-left {
     font-weight        : 700;
     line-height        : var(--vspace-0_875);
     color              : var(--color-white);
-    margin             : 0 0 var(--vspace-0_5);
+    margin             : 0;
 }
 
 .quote-card__text::before,
@@ -4899,15 +4936,6 @@ img.u-pull-left {
 
 .quote-card__text::after {
     content : '"';
-}
-
-.quote-card__attribution {
-    font-size      : var(--text-xs);
-    letter-spacing : .1em;
-    text-transform : uppercase;
-    color          : var(--color-text-light);
-    margin         : 0;
-    min-height     : 1.2em;
 }
 
 @media (hover: hover) and (pointer: fine) {
