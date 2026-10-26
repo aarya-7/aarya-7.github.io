@@ -3265,6 +3265,15 @@ img.u-pull-left {
     }
 }
 
+/* between the desktop nav and the mobile menu (901-1000px) the full nav was
+ * touching or overlapping the social icons, so tighten it a little more */
+@media screen and (min-width: 901px) and (max-width: 1000px) {
+    .s-header__nav a {
+        letter-spacing : .3em;
+        padding        : 0 1.4rem;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .s-header {
         display          : block;
@@ -3871,6 +3880,14 @@ img.u-pull-left {
     background-image : url(../images/icons/services/icon-ai.svg);
 }
 
+.service-icon--product {
+    background-image : url(../images/icons/services/icon-product.svg);
+}
+
+.service-icon--stats {
+    background-image : url(../images/icons/services/icon-stats.svg);
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * services
@@ -3947,7 +3964,14 @@ img.u-pull-left {
  * ## portfolio list
  * ------------------------------------------------------------------- */
 .folio-list {
-    margin-top : var(--vspace-2_5);
+    margin-top    : var(--vspace-2_5);
+    /* cancels the last row's bottom margin below so "Show More" spacing is unchanged */
+    margin-bottom : calc(var(--gutter) * -2);
+}
+
+/* rows were touching: give them the same gap as the space between the columns */
+.folio-list > .column {
+    margin-bottom : calc(var(--gutter) * 2);
 }
 
 .js-folio-extra {
@@ -4279,10 +4303,6 @@ img.u-pull-left {
 }
 
 @media screen and (max-width: 400px) {
-    .folio-list {
-        margin-bottom : var(--vspace-1);
-    }
-
     .clients-outer .text-clients-title {
         max-width   : 300px;
         font-size   : var(--text-lg);
@@ -4801,6 +4821,16 @@ img.u-pull-left {
     margin-bottom : 0;
 }
 
+/* the default bullet hangs 18px to the left of the column; keep it on the
+ * column edge so the list lines up with the label above it */
+.s-about-plain ul.disc li {
+    padding-left : 2.6rem;
+}
+
+.s-about-plain ul.disc li::before {
+    left : 0;
+}
+
 /* reading list: title on one line, author muted beneath it */
 .book-title,
 .book-author {
@@ -4864,11 +4894,16 @@ img.u-pull-left {
 }
 
 .quotes-carousel__viewport {
+    -webkit-mask-image : linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
+    mask-image         : linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
     display     : flex;
     align-items : center;
     overflow-x  : clip;
     overflow-y  : visible;
-    height      : calc(var(--quote-card-h) * 1.25);
+    /* extra 3rem top and bottom (cancelled by the negative margin) keeps the
+     * scaled card and its hover glow inside the mask's painted area */
+    height      : calc(var(--quote-card-h) * 1.25 + 6rem);
+    margin      : -3rem 0;
 }
 
 .quotes-carousel__track {
