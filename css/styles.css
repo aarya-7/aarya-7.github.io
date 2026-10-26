@@ -4500,8 +4500,14 @@ img.u-pull-left {
     align-items : center;
 }
 
-/* the longer address is wider than a phone's content area at the footer's
- * large type size, so let it scale down with the screen width */
+/* the longer address is wider than the footer column (tablets) and than a
+ * phone's content area at the footer's large type size, so scale it down */
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+    .contact-list__email {
+        font-size : min(23px, 2.6vw);
+    }
+}
+
 @media screen and (max-width: 600px) {
     .contact-list__email {
         font-size : min(var(--text-lg), 5.2vw);
