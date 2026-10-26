@@ -200,11 +200,11 @@
                     </p>
                 </div>
                 <div class="column stats__item" data-animate-el>
-                    <div class="stats__count" data-counter="50" data-round="1"><span>0</span>%</div>
-                    <h5>High-Risk Churn Rate</h5>
+                    <div class="stats__count" data-counter="17" data-round="1"><span>0</span>%</div>
+                    <h5>At-Risk Churn Rate</h5>
                     <p>
-                    HIGH-risk accounts churn at 50%, more than 3x the MEDIUM-risk
-                    rate, driven by usage drop and error rate.
+                    HIGH and MEDIUM-risk accounts churned at about 17% a month,
+                    versus 7% for LOW, across 24 months.
                     </p>
                 </div>
                 <div class="column stats__item" data-animate-el>
@@ -219,7 +219,7 @@
                     <div class="stats__count" data-counter="3" data-round="1"><span>0</span>x</div>
                     <h5>Conversion Lift</h5>
                     <p>
-                    Returning visitors convert at nearly 3x the rate of new visitors.
+                    Returning visitors convert at about 3x the rate of new visitors, from 3 to 9 pm.
                     </p>
                 </div>
 
@@ -350,14 +350,9 @@
                         </div>
                         <div class="folio-item__caption">
                             <ul class="disc">
-                                <li>Retention drops fastest in month 1, from 90.1% to 76.5% by month 3, 57.4% by
-                                month 6, making onboarding the highest-leverage window.</li>
-                                <li>The risk model held up, high-risk accounts churned at 50%, over 3x medium
-                                (15%) and 7x low (7%).</li>
-                                <li>Usage drop and error rate were the earliest churn signals, ahead of support
-                                tickets or billing.</li>
-                                <li>$165K of the $9.9M in MRR analyzed sat in Enterprise's 21–50 seat range, the
-                                highest-risk segment for revenue loss.</li>
+                                <li>Flagged who was about to leave: HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, using a rule-based score with reason codes (usage drop, errors, low CSAT, slow resolution).</li>
+                                <li>Showed where customers are lost: retention fell from 90.1% at month 1 to 57.4% at month 6 in PostgreSQL cohort curves, making onboarding the highest-leverage window.</li>
+                                <li>Caught churn getting worse: monthly logo churn rose from about 6% (May to Jul 2024) to 8 to 11% (Aug to Dec), lifting churned MRR to $400K to $500K a month, with 1–5 seat accounts losing about 18% of MRR a month.</li>
                             </ul>
                         </div>
                         <div class="folio-item__detail" hidden>
@@ -371,10 +366,7 @@
                             where the dollars were leaking from, and validated a rules-based risk-banding
                             system — HIGH/MEDIUM/LOW — against real churn outcomes rather than just
                             theorizing about which signals should matter.</p>
-                            <p>The risk bands held up under validation: HIGH-risk accounts churned at 50%,
-                            more than 3x the MEDIUM-risk rate, with usage drop and error rate emerging as
-                            the earliest, most reliable signals — ahead of anything from support tickets or
-                            billing. The whole thing was packaged into executive-facing Tableau dashboards,
+                            <p>The risk bands held up under validation: HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, with the score explained by reason codes (usage drop, errors, low CSAT, slow resolution). The whole thing was packaged into executive-facing Tableau dashboards,
                             so the answer to "who's at risk and why" didn't require a SQL query every time
                             someone asked.</p>
                         </div>
@@ -398,14 +390,9 @@
                         </div>
                         <div class="folio-item__caption">
                             <ul class="disc">
-                                <li>The real leak wasn't checkout, it was one step earlier, 2.21% viewer-to-cart
-                                vs 27.17% cart-to-purchase.</li>
-                                <li>Aggregate metrics would've hidden this entirely. Only session-level tracking
-                                in PostgreSQL surfaced the exact stage where people dropped off.</li>
-                                <li>Returning visitors convert at nearly 3x new visitors, meaning the fix isn't
-                                just the funnel, it's the first-visit experience.</li>
-                                <li>The real fix is product-page clarity, not a checkout redesign. That reframe
-                                became 3 proposed A/B tests instead of the obvious checkout fix.</li>
+                                <li>Located the real leak: 97.8% of viewing sessions never reach cart, while 72.8% cart abandonment sits near the roughly 70% industry average, so the fix is the product page and add-to-cart step, not a checkout redesign.</li>
+                                <li>Found returning visitors converting at about 3x new visitors from 3 to 9 pm and several high-traffic categories below average, shaping 3 proposed A/B tests (product page, category UX, cart recovery).</li>
+                                <li>Built a PostgreSQL session mart (1,761,675 sessions; 30-minute sessionization, window functions) feeding 4 Tableau dashboards on funnel health, segmentation, category performance and time to convert, because aggregate metrics alone would have hidden the leak.</li>
                             </ul>
                         </div>
                         <div class="folio-item__detail" hidden>
@@ -416,13 +403,11 @@
                             transactions), I built a session-level clickstream mart in PostgreSQL from
                             scratch: sessionization, timestamp cleaning, and stage-by-stage conversion
                             tracking across the full funnel.</p>
-                            <p>The data told a different story. View-to-cart converted at just 2.21% — a
-                            97.79% drop — while cart-to-purchase actually held up fine at 27.17%. Aggregate,
+                            <p>The data told a different story. 97.8% of viewing sessions never reached cart, while 72.8% cart abandonment sat near the roughly 70% industry average. Aggregate,
                             top-line metrics would have hidden this entirely; only session-level tracking
                             surfaced exactly where the funnel actually breaks.</p>
                             <p>That reframed the fix: not a checkout redesign, but product-page clarity. I
-                            also found returning visitors converting at nearly 3x the rate of new visitors
-                            during peak hours, pointing at the first-visit experience as much as the funnel
+                            also found returning visitors converting at about 3x the rate of new visitors from 3 to 9 pm, pointing at the first-visit experience as much as the funnel
                             itself. The output was 3 proposed A/B tests (PDP clarity, category UX, cart
                             recovery) and 4 Tableau dashboards, packaged into a stakeholder memo — not just
                             a chart, a specific, arguable recommendation.</p>
@@ -447,14 +432,9 @@
                         </div>
                         <div class="folio-item__caption">
                             <ul class="disc">
-                                <li>The spike wasn't random, it was regional. Southeast Brazil drove 72% of the
-                                +558% delta.</li>
-                                <li>A more robust stat caught what standard deviation would've missed. MAD-based
-                                z-scores, validated against 3 stress-test shocks.</li>
-                                <li>Root-cause time dropped from hours to zero. Schema-bound fact packets meant
-                                auditable briefs, no manual querying.</li>
-                                <li>12 events flagged with severity and driver attribution, so leadership acted
-                                on ranked risk, not raw alerts.</li>
+                                <li>Built an anomaly detector on MAD-based robust z-scores (less fooled by volatility than a standard-deviation threshold) over detrended GMV residuals, surfacing 12 revenue anomalies across 18 months with severity tiers, and validated it by catching all 3 synthetic shocks.</li>
+                                <li>Flagged Black Friday as a +558% spike (z=29.79) and attributed it to its drivers: 72% of the delta came from Southeast Brazil, so the spike was regional, not random.</li>
+                                <li>Automated the explanations: an LLM limited to precomputed fact packets writes What/Why/Action briefs where every number traces back to the data.</li>
                             </ul>
                         </div>
                         <div class="folio-item__detail" hidden>
@@ -474,8 +454,7 @@
                             constrained an LLM to only the pre-computed fact packets (no open-ended
                             querying), so every generated brief is auditable back to a specific number.
                             Across 18 months, the pipeline surfaced 12 flagged events this way — including a
-                            Black Friday spike of +558% (z=29.79) correctly attributed to Southeast Brazil at
-                            72% of the total delta, with zero manual digging.</p>
+                            Black Friday spike of +558% (z=29.79) correctly attributed to Southeast Brazil at 72% of the total delta, with every number traceable back to the data.</p>
                         </div>
                     </div>
                 </div> <!-- end column -->
@@ -614,18 +593,9 @@
                         <h4 class="timeline-item__title">Product &amp; Data Analytics Intern</h4>
                         <div class="timeline-item__org">involveMINT, Remote</div>
                         <ul class="disc">
-                            <li>Defining how retention is measured on a two-sided platform (activation, active,
-                            retained, churned) and mapping the 5 highest-priority member journeys, including
-                            onboarding, invites, sending credit and ordering, to find where members drop off
-                            before a first trade.</li>
-                            <li>Designing an event tracking plan to capture the abandoned attempts the database
-                            doesn't record, and tagging each drop-off as UX friction or market (supply) friction
-                            so fixes target the right problem, then recommending UI/UX improvements from user
-                            data and A/B tests.</li>
-                            <li>Building Python visualizations and reports on transaction, credit balance,
-                            treasury wallet and member retention data, migrating the member data dashboard from
-                            the legacy application to the new platform, and QA testing new features while
-                            supporting product scoping and documentation.</li>
+                            <li>Defining the retention measurement framework (activation, active, retained, churned) for a two-sided credit exchange and mapping the 5 priority member journeys (onboarding, invites, send credit, ordering) to find drop-off before a first trade.</li>
+                            <li>Designing an event tracking plan to capture the abandoned attempts the database misses, tagging each drop-off as UX friction or market (supply) friction, with a ranked friction audit to prioritize UI/UX fixes alongside A/B test data.</li>
+                            <li>Building Python visualizations and reports on transaction, credit balance, treasury wallet and retention data while migrating the member dashboard to the new platform, QA testing features and supporting product scoping and documentation.</li>
                         </ul>
                     </div>
 
@@ -651,14 +621,8 @@
                         <h4 class="timeline-item__title">Data Science Intern</h4>
                         <div class="timeline-item__org">Exposys Data Labs, Maharashtra, India</div>
                         <ul class="disc">
-                            <li>Took a clinical dataset of 768 patients across 8 variables and worked through
-                            the unglamorous part first, missing values, inconsistent entries, features that
-                            needed engineering before any modeling could start.</li>
-                            <li>Ran a contribution analysis to isolate which variables actually mattered, and
-                            found glucose, BMI, and age carrying the real predictive weight for diabetes
-                            risk, not the ones that looked interesting on the surface.</li>
-                            <li>Rebuilt those findings as visualizations meant for people without a stats
-                            background, since a result nobody can read is a result that doesn't get used.</li>
+                            <li>Cleaned and engineered features across a 768-patient, 8-variable clinical dataset (glucose, BMI, insulin), preparing the data for predictor and risk analysis.</li>
+                            <li>Identified glucose, BMI, and age as the strongest predictors of diabetes risk through variable contribution analysis, not the variables that looked interesting on the surface, and translated the findings into stakeholder-ready visualizations of risk-factor and segment-level patterns.</li>
                         </ul>
                     </div>
                 </div>
