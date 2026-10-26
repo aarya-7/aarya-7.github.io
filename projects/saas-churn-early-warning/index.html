@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SaaS Churn Early-Warning System | Aarya Bhivsanee</title>
+    <meta name="description" content="Case study: a PostgreSQL and Tableau churn early-warning system. HIGH and MEDIUM-risk accounts churned about 17% a month vs 7% for LOW.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <link rel="canonical" href="https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Aarya Bhivsanee">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/">
+    <meta property="og:title" content="SaaS Churn Early-Warning System | Aarya Bhivsanee">
+    <meta property="og:description" content="Case study: a PostgreSQL and Tableau churn early-warning system. HIGH and MEDIUM-risk accounts churned about 17% a month vs 7% for LOW.">
+    <meta property="og:image" content="https://www.aaryabhivsanee.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Aarya Bhivsanee, Data and Product Analyst">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SaaS Churn Early-Warning System | Aarya Bhivsanee">
+    <meta name="twitter:description" content="Case study: a PostgreSQL and Tableau churn early-warning system. HIGH and MEDIUM-risk accounts churned about 17% a month vs 7% for LOW.">
+    <meta name="twitter:image" content="https://www.aaryabhivsanee.com/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="Aarya Bhivsanee, Data and Product Analyst">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "TechArticle",
+                "@id": "https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/#article",
+                "headline": "SaaS Churn Early-Warning System",
+                "description": "Aarya Bhivsanee built an early-warning system for SaaS customer churn using PostgreSQL and Tableau. HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, and retention fell from 90.1% at month 1 to 57.4% at month 6.",
+                "url": "https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/",
+                "mainEntityOfPage": "https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/",
+                "inLanguage": "en-US",
+                "dateModified": "2026-10-25",
+                "image": "https://www.aaryabhivsanee.com/images/og-image.jpg",
+                "keywords": "churn analysis, customer retention, cohort analysis, risk scoring, PostgreSQL, Tableau",
+                "author": {
+                    "@id": "https://www.aaryabhivsanee.com/#person"
+                },
+                "about": "Churn & Retention Analytics",
+                "isPartOf": {
+                    "@id": "https://www.aaryabhivsanee.com/#website"
+                }
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "SaaS Churn Early-Warning System",
+                "codeRepository": "https://github.com/aarya-7/Saas-retention-churn-early-warning",
+                "programmingLanguage": [
+                    "SQL"
+                ],
+                "author": {
+                    "@id": "https://www.aaryabhivsanee.com/#person"
+                },
+                "description": "Aarya Bhivsanee built an early-warning system for SaaS customer churn using PostgreSQL and Tableau. HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, and retention fell from 90.1% at month 1 to 57.4% at month 6."
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.aaryabhivsanee.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Projects",
+                        "item": "https://www.aaryabhivsanee.com/#projects"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "SaaS Churn Early-Warning System",
+                        "item": "https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/"
+                    }
+                ]
+            },
+            {
+                "@id": "https://www.aaryabhivsanee.com/#person",
+                "@type": "Person",
+                "name": "Aarya Bhivsanee",
+                "url": "https://www.aaryabhivsanee.com/"
+            }
+        ]
+    }
+    </script>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/css/vendor.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+    <div class="s-pagewrap">
+
+        <header class="s-header">
+
+            <div class="s-header__block">
+                <div class="s-header__logo">
+                    <a class="logo" href="/">
+                        <span class="logo__text">Aarya Bhivsanee<span class="logo__accent">.</span></span>
+                    </a>
+                </div>
+
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div> <!-- end s-header__block -->
+
+            <div class="row s-header__nav-wrap">
+                <nav class="s-header__nav">
+                    <ul>
+                        <li><a href="/#intro">Intro</a></li>
+                        <li><a href="/#skills">Skills</a></li>
+                        <li class="current"><a href="/#projects">Projects</a></li>
+                        <li><a href="/#experience">Experience</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                        <li><a href="/about.html">About</a></li>
+                    </ul>
+                </nav>
+
+                <ul class="s-header__social">
+                    <li>
+                        <a href="mailto:contact@aaryabhivsanee.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,6v0.511 l-8,6.223L4,6.512V6H20z M4,18V9.044l7.386,5.745C11.566,14.93,11.783,15,12,15s0.434-0.07,0.614-0.211L20,9.044L20.002,18H4z"></path></svg>
+                            <span class="screen-reader-text">Email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/aarya-bhivsanee" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z"></path></svg>
+                            <span class="screen-reader-text">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/aarya-7" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.305.763-1.605-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path></svg>
+                            <span class="screen-reader-text">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://public.tableau.com/app/profile/aarya.bhivsanee/vizzes" target="_blank" rel="noopener">
+                            <svg class="icon-tableau" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                <g transform="translate(12,4)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(7,8)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(17,8)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(4,12)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(12,12)"><rect x="-0.5" y="-2.6" width="1" height="5.2" rx="0.5" ry="0.5"></rect><rect x="-2.6" y="-0.5" width="5.2" height="1" rx="0.5" ry="0.5"></rect></g>
+                                <g transform="translate(20,12)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(7,16)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(17,16)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                                <g transform="translate(12,20)"><rect x="-0.4" y="-1.6" width="0.8" height="3.2" rx="0.4" ry="0.4"></rect><rect x="-1.6" y="-0.4" width="3.2" height="0.8" rx="0.4" ry="0.4"></rect></g>
+                            </svg>
+                            <span class="screen-reader-text">Tableau Public</span>
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- end s-header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+        <main>
+
+        <section class="s-project">
+            <div class="row row-x-center">
+                <div class="column s-intro__about s-about-plain">
+                    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/#projects">Projects</a> / <span aria-current="page">SaaS Churn Early-Warning System</span></nav>
+                    <p class="about-section__eyebrow">Churn &amp; Retention Analytics</p>
+                    <h1 class="project-title">SaaS Churn Early-Warning System</h1>
+                    <p class="project-summary">Aarya Bhivsanee built an early-warning system for SaaS customer churn using PostgreSQL and Tableau. HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, and retention fell from 90.1% at month 1 to 57.4% at month 6.</p>
+
+                    <div class="about-intro-photo">
+                        <img src="/images/portfolio/project-churn.svg" alt="Cohort retention and churn risk-band chart" width="1050" height="700">
+                    </div>
+
+                    <h2 class="about-section__eyebrow">Overview</h2>
+                    <p>RavenStack, a synthetic SaaS company, needed to know not just that churn was happening, but where it was concentrated and whether a simple, explainable warning system could actually catch it before the fact.</p>
+
+                    <h2 class="about-section__eyebrow">Approach</h2>
+                    <p>Working in PostgreSQL, I built cohort retention tracking (M1/M3/M6) to find where the drop-off actually starts, quantified churned MRR by segment to find where the dollars were leaking from, and validated a rules-based risk-banding system — HIGH/MEDIUM/LOW — against real churn outcomes rather than just theorizing about which signals should matter.</p>
+
+                    <h2 class="about-section__eyebrow">Results</h2>
+                    <ul class="disc">
+                        <li>Flagged who was about to leave: HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, using a rule-based score with reason codes (usage drop, errors, low CSAT, slow resolution).</li>
+                        <li>Showed where customers are lost: retention fell from 90.1% at month 1 to 57.4% at month 6 in PostgreSQL cohort curves, making onboarding the highest-leverage window.</li>
+                        <li>Caught churn getting worse: monthly logo churn rose from about 6% (May to Jul 2024) to 8 to 11% (Aug to Dec), lifting churned MRR to $400K to $500K a month, with 1–5 seat accounts losing about 18% of MRR a month.</li>
+                    </ul>
+                    <p style="margin-top: var(--vspace-0_75)">The risk bands held up under validation: HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, with the score explained by reason codes (usage drop, errors, low CSAT, slow resolution). The whole thing was packaged into executive-facing Tableau dashboards, so the answer to &quot;who&#x27;s at risk and why&quot; didn&#x27;t require a SQL query every time someone asked.</p>
+
+                    <h2 class="about-section__eyebrow">Tools</h2>
+                    <ul class="project-tools"><li>PostgreSQL</li><li>Tableau</li><li>Cohort retention analysis</li><li>Rule-based risk scoring</li></ul>
+
+                    <div class="project-links">
+                        <a class="project-detail-modal__link" href="https://github.com/aarya-7/Saas-retention-churn-early-warning" target="_blank" rel="noopener">View SaaS Churn Early-Warning System on GitHub</a>
+                        <a class="project-detail-modal__link" href="/Resume_AaryaBhivsanee.pdf" download>Download resume (PDF)</a>
+                    </div>
+
+                    <nav class="project-pager" aria-label="More projects"><a class="project-pager__next" href="/projects/ecommerce-funnel-diagnostics/"><small>Next project</small>E-Commerce Funnel Diagnostics</a></nav>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+        <section class="s-about-footer-wrap">
+
+            <footer class="s-footer">
+
+                <div class="row s-footer__top">
+                    <div class="column lg-6 md-6 stack-on-700 s-footer__block contact-address">
+                        <h4 class="h6">Location</h4>
+
+                        <p>
+                        New Jersey, <br>
+                        United States
+                        </p>
+                    </div>
+
+                    <div class="column lg-6 md-6 stack-on-700 s-footer__block contact-number">
+                        <h4 class="h6">Contact Me</h4>
+
+                        <ul class="contact-list">
+                            <li>
+                                <span class="contact-list__label">Business</span>
+                                <a href="mailto:contact@aaryabhivsanee.com" class="contact-list__email">
+                                    <svg class="contact-list__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,6v0.511 l-8,6.223L4,6.512V6H20z M4,18V9.044l7.386,5.745C11.566,14.93,11.783,15,12,15s0.434-0.07,0.614-0.211L20,9.044L20.002,18H4z"></path></svg>
+                                    contact@aaryabhivsanee.com
+                                </a>
+                            </li>
+                            <li>
+                                <span class="contact-list__label">Personal</span>
+                                <a href="mailto:aaryabhivsanee@gmail.com" class="contact-list__email">
+                                    <svg class="contact-list__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,6v0.511 l-8,6.223L4,6.512V6H20z M4,18V9.044l7.386,5.745C11.566,14.93,11.783,15,12,15s0.434-0.07,0.614-0.211L20,9.044L20.002,18H4z"></path></svg>
+                                    aaryabhivsanee@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end s-footer__top -->
+
+                <div class="row s-footer__bottom">
+                    <div class="column ss-copyright">
+                        <span>© 2026 Aarya Bhivsanee</span>
+                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                    </div>
+
+                    <div class="ss-go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top">
+                            <span class="ss-go-top__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:rotate(90deg);-ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1)"><path d="M6 4H18V6H6zM11 14L11 20 13 20 13 14 18 14 12 8 6 14z"></path></svg>
+                            </span>
+                            <span class="ss-go-top__text">Back to Top</span>
+                        </a>
+                    </div>
+                </div> <!-- end s-footer__top -->
+
+            </footer>
+
+        </section> <!-- end s-about-footer-wrap -->
+
+    </div> <!-- end s-pagewrap -->
+
+    <script src="/js/plugins.js" defer></script>
+    <script src="/js/main.js" defer></script>
+
+</body>
+</html>

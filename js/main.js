@@ -12,15 +12,16 @@
     * -------------------------------------------------- */
     const tl = anime.timeline( {
         easing: 'easeInOutCubic',
-        duration: 400,
+        duration: 300,
         autoplay: false
     })
     .add({
         targets: '#loader',
         opacity: 0,
-        duration: 500,
+        duration: 250,
         begin: function(anim) {
-            window.scrollTo(0, 0);
+            // keep the position when arriving on a #section link (e.g. from a project page)
+            if (!window.location.hash) window.scrollTo(0, 0);
         }
     })
     .add({
@@ -40,17 +41,17 @@
         targets: ['.s-intro__text', '.s-intro__about'],
         translateY: [100, 0],
         opacity: [0, 1],
-        delay: anime.stagger(150)
+        delay: anime.stagger(100)
     })
     .add({
         targets: '.s-intro__bg',
         opacity: [0, 1],
-        duration: 500,
+        duration: 350,
     })
     .add({
         targets: ['.s-intro__scroll-down'],
         opacity: [0, 1],
-        duration: 250
+        duration: 200
     });
 
 
@@ -62,12 +63,19 @@
         if (!preloader) return;
 
         html.classList.add('ss-preload');
-        
-        window.addEventListener('load', function() {
+
+        let started = false;
+        function start() {
+            if (started) return;
+            started = true;
             html.classList.remove('ss-preload');
             html.classList.add('ss-loaded');
             tl.play();
-        });
+        }
+
+        window.addEventListener('load', start);
+        // slow images or fonts shouldn't keep the content behind the loader
+        setTimeout(start, 1200);
 
     }; // end ssPreloader
 
@@ -312,10 +320,14 @@
             const title = folioItem.querySelector('.folio-item__title');
             const bullets = folioItem.querySelector('.folio-item__caption ul');
             const projectLink = folioItem.querySelector('.folio-item__project-link');
+            const caseStudyUrl = thumbLink ? thumbLink.getAttribute('href') : '';
 
             if (!(thumbLink && img && title && bullets)) return;
 
             function openModal(event) {
+
+                // let ctrl/cmd/shift/middle-click open the case-study page normally
+                if (event.metaKey || event.ctrlKey || event.shiftKey || event.button === 1) return;
 
                 event.preventDefault();
 
@@ -326,7 +338,8 @@
                             '<div class="project-detail-modal__cat">' + (cat ? cat.innerHTML : '') + '</div>' +
                             '<h3 class="project-detail-modal__title">' + title.innerHTML + '</h3>' +
                             '<ul class="disc">' + bullets.innerHTML + '</ul>' +
-                            (projectLink ? '<a class="project-detail-modal__link" href="' + projectLink.getAttribute('href') + '" target="_blank" rel="noopener">View Project</a>' : '') +
+                            (caseStudyUrl ? '<a class="project-detail-modal__link" href="' + caseStudyUrl + '">Read the case study</a> ' : '') +
+                            (projectLink ? '<a class="project-detail-modal__link" href="' + projectLink.getAttribute('href') + '" target="_blank" rel="noopener">View on GitHub</a>' : '') +
                         '</div>' +
                     '</div>';
 

@@ -1,0 +1,81 @@
+# Aarya Bhivsanee
+
+> Data and product analyst in Newark, NJ (M.S. in Data Science, Stevens Institute of Technology). Currently a Product & Data Analytics Intern at involveMINT. Focus: customer retention, churn, funnel and product analytics, and anomaly detection. Open to roles in data analytics, business intelligence and product analytics.
+
+Source: https://www.aaryabhivsanee.com/ (all figures below match the resume at https://www.aaryabhivsanee.com/resume/).
+
+## Quick facts
+- Location: Newark, NJ, United States
+- Current role: Product & Data Analytics Intern, involveMINT Inc. (remote), Oct 2026 - present
+- Education: M.S. in Data Science, Stevens Institute of Technology (Aug 2024 - May 2026); B.E. in Artificial Intelligence and Data Science, Savitribai Phule Pune University (Aug 2020 - May 2024)
+- Tools: SQL (Snowflake, PostgreSQL, MySQL), Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, SciPy, BeautifulSoup), Tableau, Power BI, Excel, Google Sheets, dbt, Jupyter Notebook, Git/GitHub, Claude, Claude API, ChatGPT, n8n, Gemini
+- Contact: contact@aaryabhivsanee.com
+
+## Experience
+### Product & Data Analytics Intern, involveMINT Inc. (Oct 2026 - present)
+- Defining the retention measurement framework (activation, active, retained, churned) for a two-sided credit exchange and mapping the 5 priority member journeys (onboarding, invites, send credit, ordering) to find drop-off before a first trade.
+- Designing an event tracking plan to capture the abandoned attempts the database misses, tagging each drop-off as UX friction or market (supply) friction, with a ranked friction audit to prioritize UI/UX fixes alongside A/B test data.
+- Building Python visualizations and reports on transaction, credit balance, treasury wallet and retention data while migrating the member dashboard to the new platform, QA testing features and supporting product scoping and documentation.
+
+### Data Science Intern, Exposys Data Labs, Maharashtra, India (2023)
+- Cleaned and engineered features across a 768-patient, 8-variable clinical dataset (glucose, BMI, insulin), preparing the data for predictor and risk analysis.
+- Identified glucose, BMI, and age as the strongest predictors of diabetes risk through variable contribution analysis, translating findings into stakeholder-ready visualizations of risk-factor and segment-level patterns.
+
+## Projects
+
+### SaaS Churn Early-Warning System (Churn & Retention Analytics)
+Page: https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/
+Code: https://github.com/aarya-7/Saas-retention-churn-early-warning
+Tools: PostgreSQL, Tableau, Cohort retention analysis, Rule-based risk scoring
+
+Aarya Bhivsanee built an early-warning system for SaaS customer churn using PostgreSQL and Tableau. HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, and retention fell from 90.1% at month 1 to 57.4% at month 6.
+
+- Flagged who was about to leave: HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, using a rule-based score with reason codes (usage drop, errors, low CSAT, slow resolution).
+- Showed where customers are lost: retention fell from 90.1% at month 1 to 57.4% at month 6 in PostgreSQL cohort curves, making onboarding the highest-leverage window.
+- Caught churn getting worse: monthly logo churn rose from about 6% (May to Jul 2024) to 8 to 11% (Aug to Dec), lifting churned MRR to $400K to $500K a month, with 1–5 seat accounts losing about 18% of MRR a month.
+
+### E-Commerce Funnel Diagnostics (Funnel & Conversion Analysis)
+Page: https://www.aaryabhivsanee.com/projects/ecommerce-funnel-diagnostics/
+Code: https://github.com/aarya-7/retail_rocket-funnel_analytics
+Tools: PostgreSQL, Tableau, Sessionization, Window functions, A/B test design
+
+Aarya Bhivsanee analysed 1,761,675 e-commerce sessions in PostgreSQL to find where the purchase funnel leaks. 97.8% of viewing sessions never reach cart, while 72.8% cart abandonment sits near the roughly 70% industry average, which pointed to the product page rather than checkout.
+
+- Located the real leak: 97.8% of viewing sessions never reach cart, while 72.8% cart abandonment sits near the roughly 70% industry average, so the fix is the product page and add-to-cart step, not a checkout redesign.
+- Found returning visitors converting at about 3x new visitors from 3 to 9 pm and several high-traffic categories below average, shaping 3 proposed A/B tests (product page, category UX, cart recovery).
+- Built a PostgreSQL session mart (1,761,675 sessions; 30-minute sessionization, window functions) feeding 4 Tableau dashboards on funnel health, segmentation, category performance and time to convert, because aggregate metrics alone would have hidden the leak.
+
+### GMV Anomaly Detection Pipeline (Anomaly Detection · Python)
+Page: https://www.aaryabhivsanee.com/projects/gmv-anomaly-detection/
+Code: https://github.com/aarya-7/gmv-narrator
+Tools: PostgreSQL, Python, Claude API, Tableau
+
+Aarya Bhivsanee built a revenue anomaly detector on MAD-based robust z-scores that surfaced 12 anomalies across 18 months and caught all 3 synthetic shocks. It flagged Black Friday as a +558% spike (z=29.79) and attributed 72% of that change to Southeast Brazil.
+
+- Built an anomaly detector on MAD-based robust z-scores (less fooled by volatility than a standard-deviation threshold) over detrended GMV residuals, surfacing 12 revenue anomalies across 18 months with severity tiers, and validated it by catching all 3 synthetic shocks.
+- Flagged Black Friday as a +558% spike (z=29.79) and attributed it to its drivers: 72% of the delta came from Southeast Brazil, so the spike was regional, not random.
+- Automated the explanations: an LLM limited to precomputed fact packets writes What/Why/Action briefs where every number traces back to the data.
+
+### H-1B LCA Disclosure Analytics Pipeline (Data Engineering · dbt/Snowflake)
+Page: https://www.aaryabhivsanee.com/projects/h1b-lca-analytics-pipeline/
+Code: https://github.com/aarya-7/h1b-lca-analytics-pipeline
+Tools: Snowflake, dbt, SQL, ELT pipeline design
+
+Aarya Bhivsanee built an ELT pipeline that loads U.S. Department of Labor H-1B LCA disclosure files into Snowflake and models them with dbt in RAW, staging, intermediate and marts layers, reconciling schema drift and normalising mixed wage units into one annualised figure.
+
+- Built an ELT pipeline from raw DOL Excel/Parquet files into Snowflake, layered through dbt as RAW → staging → intermediate → marts, so every transformation is visible in version control, not patched silently in the warehouse.
+- Reconciled real source inconsistencies explicitly in staging: a hyphen-vs-underscore column rename between Q1 and Q2–Q4, and nanosecond Unix timestamps cast to real dates.
+- Normalized wages mixing Hour/Week/Bi-Weekly/Month/Year units into one annualized figure, flagging implausible values instead of silently guessing or dropping them.
+- Deduplicated four quarters of FY2025 LCA disclosures down to one row per case, tracking H-1B sponsorship by employer, industry, and role across the NY/NJ tech market.
+
+### Credit Card Fraud Detection (Applied ML · Fraud Detection)
+Page: https://www.aaryabhivsanee.com/projects/credit-card-fraud-detection/
+Code: https://github.com/aarya-7/Credit-Card-Fraud-Detection
+Tools: Python, Random Forest, AdaBoost, XGBoost, Plotly
+
+Aarya Bhivsanee benchmarked Random Forest, AdaBoost and XGBoost on highly imbalanced credit card transaction data, scored by ROC-AUC rather than accuracy. XGBoost led at 0.982, ahead of Random Forest (0.902) and AdaBoost (0.870).
+
+- Benchmarked three classifiers — Random Forest, AdaBoost, and XGBoost — on highly imbalanced transaction data, evaluated by ROC-AUC rather than raw accuracy.
+- XGBoost led at 0.982 ROC-AUC, outperforming Random Forest (0.902) and AdaBoost (0.870) at catching fraudulent transactions.
+- Explored anonymized, PCA-transformed transaction features to find what separates fraud from legitimate activity without access to raw transaction meaning.
+- Built interactive Plotly visualizations to make model results and class-imbalance tradeoffs inspectable, not just a single accuracy number.

@@ -77,7 +77,7 @@
 /* ------------------------------------------------------------------- 
  * ## fonts 
  * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap");
+/* web fonts (Inter, Manrope) are loaded with <link> tags in each page head so they no longer block this stylesheet */
 
 :root {
 
@@ -4774,6 +4774,11 @@ img.u-pull-left {
     margin : 0 0 var(--vspace-1_5);
 }
 
+.about-intro-photo picture {
+    display : block;
+    height  : 100%;
+}
+
 /* base img rule adds a bottom margin that left an empty strip inside the frame */
 .about-intro-photo img {
     display       : block;
@@ -5033,4 +5038,238 @@ img.u-pull-left {
         padding-top    : var(--vspace-1_5);
         padding-bottom : var(--vspace-1_5);
     }
+}
+
+
+/* ===================================================================
+ * # PROJECT, RESUME AND FAQ PAGES
+ *
+ * Reuse the About page card column (.s-intro__about.s-about-plain) so every
+ * text edge lines up; these rules only add what those pages need on top.
+ * ------------------------------------------------------------------- */
+.s-project {
+    padding-top    : calc(var(--header-height) + var(--vspace-3));
+    padding-bottom : var(--vspace-2);
+}
+
+.breadcrumb {
+    font-size      : var(--text-xs);
+    letter-spacing : .08em;
+    text-transform : uppercase;
+    color          : var(--color-text-light);
+    margin-bottom  : var(--vspace-1);
+}
+
+.breadcrumb a {
+    color      : var(--color-text-light);
+    transition : color .2s ease-out;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+    color : var(--color-1);
+}
+
+.breadcrumb [aria-current] {
+    color : var(--color-text-dark);
+}
+
+.project-title {
+    font-size     : var(--text-xxl);
+    line-height   : 1.2;
+    margin-top    : 0;
+    margin-bottom : var(--vspace-0_75);
+}
+
+@media screen and (max-width: 800px) {
+    .project-title {
+        font-size : var(--text-xl);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project-title {
+        font-size : var(--text-lg);
+    }
+}
+
+.s-about-plain .project-summary {
+    font-size     : calc(var(--text-size) * 1.2);
+    line-height   : 1.6;
+    color         : var(--color-text-dark);
+    margin-bottom : var(--vspace-1_5);
+}
+
+.s-project h2.about-section__eyebrow {
+    margin-top : var(--vspace-2);
+}
+
+/* the category line is a <p>, so the card's white paragraph colour would win; keep it the orange label */
+.s-about-plain p.about-section__eyebrow {
+    color         : var(--color-1);
+    margin-bottom : var(--vspace-0_75);
+}
+
+.project-tools {
+    display    : flex;
+    flex-wrap  : wrap;
+    gap        : .8rem;
+    list-style : none;
+    margin     : 0;
+    padding    : 0;
+}
+
+.project-tools li {
+    padding       : .4rem 1.2rem;
+    font-size     : var(--text-sm);
+    color         : var(--color-text-dark);
+    border        : 1px solid rgba(255, 255, 255, .2);
+    border-radius : var(--border-radius);
+}
+
+.project-links {
+    display    : flex;
+    flex-wrap  : wrap;
+    gap        : var(--vspace-0_75);
+    margin-top : var(--vspace-1_5);
+}
+
+.project-links a {
+    margin-top : 0;
+}
+
+.project-pager {
+    display         : flex;
+    justify-content : space-between;
+    gap             : var(--vspace-1);
+    margin-top      : var(--vspace-2);
+    padding-top     : var(--vspace-1);
+    border-top      : 1px solid rgba(255, 255, 255, .12);
+}
+
+.project-pager a {
+    display    : block;
+    color      : var(--color-text-dark);
+    transition : color .2s ease-out;
+}
+
+.project-pager a:hover,
+.project-pager a:focus {
+    color : var(--color-1);
+}
+
+.project-pager__next {
+    margin-left : auto;
+    text-align  : right;
+}
+
+.project-pager small {
+    display        : block;
+    font-size      : var(--text-xs);
+    letter-spacing : .1em;
+    text-transform : uppercase;
+    color          : var(--color-text-light);
+}
+
+/* resume page reuses the homepage timeline items inside the card column */
+.s-about-plain .timeline-item {
+    margin-bottom : var(--vspace-1_5);
+}
+
+.s-about-plain .timeline-item:last-child {
+    margin-bottom : 0;
+}
+
+/* quick facts + FAQ (About page) */
+.quick-facts {
+    display               : grid;
+    grid-template-columns : 11rem 1fr;
+    gap                   : .8rem 1.5rem;
+    margin                : 0;
+}
+
+.quick-facts dt {
+    margin         : 0;
+    padding-top    : .3em;
+    font-size      : var(--text-xs);
+    letter-spacing : .1em;
+    text-transform : uppercase;
+    color          : var(--color-text-light);
+}
+
+.quick-facts dd {
+    margin : 0;
+    color  : var(--color-text-dark);
+}
+
+@media screen and (max-width: 600px) {
+    .quick-facts {
+        grid-template-columns : 1fr;
+        gap                   : .2rem;
+    }
+
+    .quick-facts dd {
+        margin-bottom : var(--vspace-0_5);
+    }
+}
+
+.faq details {
+    padding       : var(--vspace-0_75) 0;
+    border-bottom : 1px solid rgba(255, 255, 255, .12);
+}
+
+.faq details:first-of-type {
+    border-top : 1px solid rgba(255, 255, 255, .12);
+}
+
+.faq summary {
+    position      : relative;
+    padding-right : 2.4rem;
+    font-family   : var(--font-2);
+    font-size     : var(--text-md);
+    font-weight   : 600;
+    line-height   : 1.35;
+    color         : var(--color-text-dark);
+    cursor        : pointer;
+    list-style    : none;
+}
+
+.faq summary::-webkit-details-marker {
+    display : none;
+}
+
+.faq summary::after {
+    content  : "+";
+    position : absolute;
+    top      : 0;
+    right    : 0;
+    color    : var(--color-1);
+}
+
+.faq details[open] summary::after {
+    content : "\2013";
+}
+
+.faq details p {
+    margin : var(--vspace-0_5) 0 0;
+}
+
+/* contact section: quiet line pointing to the online resume and case studies */
+.s-contact__alt {
+    margin-top : var(--vspace-1);
+    font-size  : var(--text-sm);
+    color      : var(--color-text-light);
+}
+
+.s-contact__alt a {
+    color           : var(--color-text-dark);
+    text-decoration : underline;
+    text-decoration-color : rgba(255, 255, 255, .3);
+    text-underline-offset : .2em;
+    transition      : color .2s ease-out;
+}
+
+.s-contact__alt a:hover,
+.s-contact__alt a:focus {
+    color : var(--color-1);
 }

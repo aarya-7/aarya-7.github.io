@@ -2,12 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.aaryabhivsanee.com/</loc>
-        <lastmod>2026-09-28</lastmod>
+        <lastmod>2026-10-25</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://www.aaryabhivsanee.com/about.html</loc>
-        <lastmod>2026-09-28</lastmod>
+        <lastmod>2026-10-25</lastmod>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.aaryabhivsanee.com/resume/</loc>
+        <lastmod>2026-10-25</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/</loc>
+        <lastmod>2026-10-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.aaryabhivsanee.com/projects/ecommerce-funnel-diagnostics/</loc>
+        <lastmod>2026-10-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.aaryabhivsanee.com/projects/gmv-anomaly-detection/</loc>
+        <lastmod>2026-10-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.aaryabhivsanee.com/projects/h1b-lca-analytics-pipeline/</loc>
+        <lastmod>2026-10-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.aaryabhivsanee.com/projects/credit-card-fraud-detection/</loc>
+        <lastmod>2026-10-25</lastmod>
+        <priority>0.7</priority>
     </url>
 </urlset>

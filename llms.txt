@@ -1,0 +1,24 @@
+# Aarya Bhivsanee
+
+> Data and product analyst in Newark, NJ (M.S. in Data Science, Stevens Institute of Technology). Currently a Product & Data Analytics Intern at involveMINT. Focus: customer retention, churn, funnel and product analytics, and anomaly detection. Open to roles in data analytics, business intelligence and product analytics.
+
+## Main pages
+- [Home](https://www.aaryabhivsanee.com/): overview, skills, selected projects, experience and contact
+- [About](https://www.aaryabhivsanee.com/about.html): quick facts, FAQ, background and interests
+- [Resume, web version](https://www.aaryabhivsanee.com/resume/): experience, projects, education and skills as plain text
+- [Resume, PDF](https://www.aaryabhivsanee.com/Resume_AaryaBhivsanee.pdf)
+
+## Project case studies
+- [SaaS Churn Early-Warning System](https://www.aaryabhivsanee.com/projects/saas-churn-early-warning/): Built an early-warning system for SaaS customer churn using PostgreSQL and Tableau. HIGH and MEDIUM-risk accounts churned at about 17% a month versus 7% for LOW across 24 months, and retention fell from 90.1% at month 1 to 57.4% at month 6.
+- [E-Commerce Funnel Diagnostics](https://www.aaryabhivsanee.com/projects/ecommerce-funnel-diagnostics/): Analysed 1,761,675 e-commerce sessions in PostgreSQL to find where the purchase funnel leaks. 97.8% of viewing sessions never reach cart, while 72.8% cart abandonment sits near the roughly 70% industry average, which pointed to the product page rather than checkout.
+- [GMV Anomaly Detection Pipeline](https://www.aaryabhivsanee.com/projects/gmv-anomaly-detection/): Built a revenue anomaly detector on MAD-based robust z-scores that surfaced 12 anomalies across 18 months and caught all 3 synthetic shocks. It flagged Black Friday as a +558% spike (z=29.79) and attributed 72% of that change to Southeast Brazil.
+- [H-1B LCA Disclosure Analytics Pipeline](https://www.aaryabhivsanee.com/projects/h1b-lca-analytics-pipeline/): Built an ELT pipeline that loads U.S. Department of Labor H-1B LCA disclosure files into Snowflake and models them with dbt in RAW, staging, intermediate and marts layers, reconciling schema drift and normalising mixed wage units into one annualised figure.
+- [Credit Card Fraud Detection](https://www.aaryabhivsanee.com/projects/credit-card-fraud-detection/): Benchmarked Random Forest, AdaBoost and XGBoost on highly imbalanced credit card transaction data, scored by ROC-AUC rather than accuracy. XGBoost led at 0.982, ahead of Random Forest (0.902) and AdaBoost (0.870).
+
+## Profiles
+- [GitHub](https://github.com/aarya-7)
+- [LinkedIn](https://linkedin.com/in/aarya-bhivsanee)
+- [Tableau Public](https://public.tableau.com/app/profile/aarya.bhivsanee/vizzes)
+
+## Contact
+- Business inquiries: contact@aaryabhivsanee.com
